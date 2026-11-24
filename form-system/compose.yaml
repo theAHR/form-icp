@@ -1,0 +1,75 @@
+name: ICP
+x-common: &common
+  DATABASE_URL: postgresql://membership:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/membership?schema=public
+  AUTH_SECRET: ${AUTH_SECRET:?Set AUTH_SECRET}
+  APP_URL: ${APP_URL:-http://localhost:3000}
+  COOKIE_SECURE: ${COOKIE_SECURE:-false}
+  STORAGE_PATH: /app/storage
+  TRUST_PROXY: ${TRUST_PROXY:-false}
+services:
+  postgres:
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: membership
+      POSTGRES_DB: membership
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U membership -d membership"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  migrate:
+    build:
+      context: .
+      target: tools
+    environment: *common
+    command: [npm, run, db:migrate]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+  app:
+    build:
+      context: .
+      target: app
+    environment: *common
+    ports:
+      - "${APP_BIND:-0.0.0.0}:3000:3000"
+    volumes:
+      - storage-data:/app/storage
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    healthcheck:
+      test:
+        [
+          CMD,
+          node,
+          -e,
+          "fetch('http://127.0.0.1:3000/login').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  seed:
+    profiles: [tools]
+    build:
+      context: .
+      target: tools
+    environment:
+      <<: *common
+      SEED_ADMIN_PASSWORD: ${SEED_ADMIN_PASSWORD:-}
+    command: [npm, run, db:seed]
+    depends_on:
+      postgres:
+        condition: service_healthy
+volumes:
+  postgres-data:
+  storage-data:

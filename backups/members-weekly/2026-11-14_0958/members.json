@@ -1,0 +1,2896 @@
+{
+  "exportedAt": "2026-11-14T06:28:40.837Z",
+  "count": 20,
+  "members": [
+    {
+      "id": "cmw6fpf3e004jvfawepi3pi9r",
+      "membershipNumber": "۰۰۱۰۰۷۱۸۰۰۱۷۱۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-07T13:23:42.123Z",
+      "expirationDate": "2027-11-07T13:23:42.122Z",
+      "person": {
+        "id": "cmw6fpf30003hvfaww1jsqv3f",
+        "firstName": "محمد",
+        "lastName": "محمدی",
+        "fatherName": "ابراهیم",
+        "nationalId": "0049417401",
+        "birthDate": "1955-03-22",
+        "mobile": "09121266515",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "حمل و نقل درون شهري",
+            "workAddress": "خیابان شهید نامجو ایستگاه روشنایی ساختمان ۳۱۷",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "phone": "02177554701",
+        "gender": "مرد",
+        "mobile": "09121266515",
+        "region": "۱۲",
+        "skills": "امور برق فشار قوی ، سیم کشی ساختمان و غیره_ حمل و نقل _ مربی کوهنوردی",
+        "velayat": "التزام عملی به ولایت فقیه دارد",
+        "district": "۱۵",
+        "lastName": "محمدی",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1955-03-22",
+        "firstName": "محمد",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "lastName": "سعید محمدی",
+            "firstName": "مهدی"
+          }
+        ],
+        "sonsCount": 1,
+        "fatherName": "ابراهیم",
+        "nationalId": "0049417401",
+        "residences": [
+          {
+            "address": "خیابان شهید نامجو کوچه علیرضا شیخ شماره ۱۳"
+          }
+        ],
+        "familiarity": "از سال ۱۳۵۲",
+        "idBookNumber": "۲۸۸۳",
+        "placeOfIssue": "تهران",
+        "maritalStatus": "متأهل",
+        "daughtersCount": 1,
+        "membershipDate": "1993-05-04",
+        "partyActivities": [
+          {
+            "position": "مدیر حوزه ۱۵ حزب موتلفه اسلامی"
+          }
+        ],
+        "educationHistory": [
+          {
+            "degree": "زیر دیپلم"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۷۱۸۰۰۱۷۱۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۷۱۸۰۰۱۷۱۰۰۷",
+        "membershipDate": "1993-05-04",
+        "membershipStatus": "فعال",
+        "firstName": "محمد",
+        "lastName": "محمدی",
+        "fatherName": "ابراهیم",
+        "gender": "مرد",
+        "nationalId": "0049417401",
+        "idBookNumber": "۲۸۸۳",
+        "birthDate": "1955-03-22",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09121266515",
+        "phone": "02177554701",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۱۵",
+        "region": "۱۲",
+        "residences": [
+          {
+            "address": "خیابان شهید نامجو کوچه علیرضا شیخ شماره ۱۳"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "daughtersCount": 1,
+        "sonsCount": 1,
+        "educationHistory": [
+          {
+            "degree": "زیر دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "حمل و نقل درون شهري",
+            "workAddress": "خیابان شهید نامجو ایستگاه روشنایی ساختمان ۳۱۷",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "skills": "امور برق فشار قوی ، سیم کشی ساختمان و غیره_ حمل و نقل _ مربی کوهنوردی",
+        "velayat": "التزام عملی به ولایت فقیه دارد",
+        "partyActivities": [
+          {
+            "position": "مدیر حوزه ۱۵ حزب موتلفه اسلامی"
+          }
+        ],
+        "familiarity": "از سال ۱۳۵۲",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "lastName": "سعید محمدی",
+            "firstName": "مهدی"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw6er7ej003evfawzr8uptea",
+      "membershipNumber": "۰۰۱۰۰۶۰۹۰۰۱۷۱۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-07T12:57:05.851Z",
+      "expirationDate": "2027-11-07T12:57:05.849Z",
+      "person": {
+        "id": "cmw6er7e8002dvfawnd9csjxs",
+        "firstName": "سیدمحمد",
+        "lastName": "شاهنگیان",
+        "fatherName": "میرکاظم",
+        "nationalId": "0043383785",
+        "birthDate": "1961-03-26",
+        "mobile": "09123540689",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "امورساخت وسازساختمان",
+            "workAddress": "سهروردی خیابان حسینی شرکت پارس بروج",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "gender": "مرد",
+        "mobile": "09123540689",
+        "region": "۱۴",
+        "skills": "مدیریت در سطوح مختلف از کارهای اداری، اجرایی، نهادی\nمعماری و ساختمان\nعلوم سیاسی",
+        "velayat": "التزام عملی به ولایت فقیه دارد",
+        "district": "۳۵",
+        "lastName": "شاهنگیان",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1961-03-26",
+        "firstName": "سیدمحمد",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "lastName": "رخ صفت",
+            "firstName": "حاج اصغر"
+          }
+        ],
+        "sonsCount": 2,
+        "fatherName": "میرکاظم",
+        "nationalId": "0043383785",
+        "residences": [
+          {
+            "address": "خیابان پیروزی خیابان رشیدی پلاک ۳"
+          }
+        ],
+        "idBookNumber": "۳۴۱",
+        "placeOfIssue": "تهران",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "تا حدودی فعالیت در حزب داشتم"
+          }
+        ],
+        "daughtersCount": 1,
+        "membershipDate": "1992-09-29",
+        "partyActivities": [
+          {
+            "position": "دبیر  شهر تهران ، قاِئم مقام معاون اداری و مالی، بازرس اصلی حزب موتلفه اسلامی ، مسئول حوزه ۳۵ قائم مقام رئیس مرکز امور سیاسی حزب موتلفه اسلامی"
+          }
+        ],
+        "educationHistory": [
+          {
+            "degree": "کارشناسی ارشد",
+            "institution": "معماری"
+          },
+          {
+            "degree": "کارشناسی",
+            "institution": "علوم سیاسی"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۶۰۹۰۰۱۷۱۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۶۰۹۰۰۱۷۱۰۰۷",
+        "membershipDate": "1992-09-29",
+        "membershipStatus": "فعال",
+        "firstName": "سیدمحمد",
+        "lastName": "شاهنگیان",
+        "fatherName": "میرکاظم",
+        "gender": "مرد",
+        "nationalId": "0043383785",
+        "idBookNumber": "۳۴۱",
+        "birthDate": "1961-03-26",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09123540689",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۳۵",
+        "region": "۱۴",
+        "residences": [
+          {
+            "address": "خیابان پیروزی خیابان رشیدی پلاک ۳"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "daughtersCount": 1,
+        "sonsCount": 2,
+        "educationHistory": [
+          {
+            "degree": "کارشناسی ارشد",
+            "institution": "معماری"
+          },
+          {
+            "degree": "کارشناسی",
+            "institution": "علوم سیاسی"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "امورساخت وسازساختمان",
+            "workAddress": "سهروردی خیابان حسینی شرکت پارس بروج",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "skills": "مدیریت در سطوح مختلف از کارهای اداری، اجرایی، نهادی\nمعماری و ساختمان\nعلوم سیاسی",
+        "velayat": "التزام عملی به ولایت فقیه دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "تا حدودی فعالیت در حزب داشتم"
+          }
+        ],
+        "partyActivities": [
+          {
+            "position": "دبیر  شهر تهران ، قاِئم مقام معاون اداری و مالی، بازرس اصلی حزب موتلفه اسلامی ، مسئول حوزه ۳۵ قائم مقام رئیس مرکز امور سیاسی حزب موتلفه اسلامی"
+          }
+        ],
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "lastName": "رخ صفت",
+            "firstName": "حاج اصغر"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw6dgdh6002avfawn93rg5u1",
+      "membershipNumber": "۰۰۱۰۰۳۶۶۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-07T12:20:40.890Z",
+      "expirationDate": "2027-11-07T12:20:40.887Z",
+      "person": {
+        "id": "cmw6dgdgv0019vfaw4xi1y5st",
+        "firstName": "جواد",
+        "lastName": "مقصودی",
+        "fatherName": "غلام حسن",
+        "nationalId": "1229479996",
+        "birthDate": "1933-12-06",
+        "mobile": "09121119447",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02164453009",
+            "workAddress": "خیابان پاستور مقابل بیمارستان شهید شوریده ساختمان شماره ۵",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "phone": "02164453009",
+        "gender": "مرد",
+        "mobile": "09121119447",
+        "skills": "برنامه ریز ، تفسیر",
+        "velayat": "التزام عملی به ولایت فقیه دارد",
+        "district": "۵",
+        "lastName": "مقصودی",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1933-12-06",
+        "firstName": "جواد",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "lifeStory": "از سال ۱۳۲۸ تشکیلات گروه شیعیان، از اعضای موسس آن  ، از سال ۱۳۵۷ ورود در حزب جمهوری اسلامی، تا پایان، شرکت در جلسات مشاورین ریاست جمهوری",
+        "referrers": [
+          {
+            "lastName": "عسگراولادی مسلمان",
+            "firstName": "حبیب الله",
+            "homeAddress": "خیابان ایران",
+            "workAddress": "کمیته امداد امام خمینی"
+          }
+        ],
+        "fatherName": "غلام حسن",
+        "nationalId": "1229479996",
+        "residences": [
+          {
+            "address": "خیابان آیت الله کاشانی، کوی مهرگان، خیابان پنجم",
+            "landline": "02166071976"
+          }
+        ],
+        "familiarity": "از بدو تاسیس",
+        "idBookNumber": "۶۳۳",
+        "placeOfIssue": "خوانسار",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "از سال ۱۳۵۷ تا پایان"
+          }
+        ],
+        "membershipDate": "1989-12-06",
+        "partyActivities": [
+          {
+            "position": "عضو شورای مرکزی حزب موتلفه اسلامی، ناظر استان گیلان مدیر حوزه ۵ برادران"
+          }
+        ],
+        "educationHistory": [
+          {
+            "degree": "حوزوی",
+            "institution": "ادبیات عرب، منطق و فلسفه"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۳۶۶۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۳۶۶۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "جواد",
+        "lastName": "مقصودی",
+        "fatherName": "غلام حسن",
+        "gender": "مرد",
+        "nationalId": "1229479996",
+        "idBookNumber": "۶۳۳",
+        "birthDate": "1933-12-06",
+        "placeOfIssue": "خوانسار",
+        "religion": "شیعه",
+        "mobile": "09121119447",
+        "phone": "02164453009",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۵",
+        "residences": [
+          {
+            "address": "خیابان آیت الله کاشانی، کوی مهرگان، خیابان پنجم",
+            "landline": "02166071976"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "educationHistory": [
+          {
+            "degree": "حوزوی",
+            "institution": "ادبیات عرب، منطق و فلسفه"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02164453009",
+            "workAddress": "خیابان پاستور مقابل بیمارستان شهید شوریده ساختمان شماره ۵",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "skills": "برنامه ریز ، تفسیر",
+        "velayat": "التزام عملی به ولایت فقیه دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "از سال ۱۳۵۷ تا پایان"
+          }
+        ],
+        "partyActivities": [
+          {
+            "position": "عضو شورای مرکزی حزب موتلفه اسلامی، ناظر استان گیلان مدیر حوزه ۵ برادران"
+          }
+        ],
+        "familiarity": "از بدو تاسیس",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "lifeStory": "از سال ۱۳۲۸ تشکیلات گروه شیعیان، از اعضای موسس آن  ، از سال ۱۳۵۷ ورود در حزب جمهوری اسلامی، تا پایان، شرکت در جلسات مشاورین ریاست جمهوری",
+        "referrers": [
+          {
+            "lastName": "عسگراولادی مسلمان",
+            "firstName": "حبیب الله",
+            "homeAddress": "خیابان ایران",
+            "workAddress": "کمیته امداد امام خمینی"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw6c8h9w0016vfaw10bk1xpn",
+      "membershipNumber": "۰۰۱۰۰۳۵۸۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-07T11:46:32.948Z",
+      "expirationDate": "2027-11-07T11:46:32.945Z",
+      "person": {
+        "id": "cmw6c8h9h0003vfaw4sj5lh1g",
+        "firstName": "حسین",
+        "lastName": "مطیعی راد",
+        "fatherName": "محمد",
+        "nationalId": "4322455085",
+        "birthDate": "1938-01-03",
+        "mobile": "09121217895",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02144246970",
+            "workAddress": "مجتمع تجاری، فاز یک بازار سنتی ستارخان",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "phone": "02144141074",
+        "gender": "مرد",
+        "mobile": "09121217895",
+        "region": "۲",
+        "skills": "تخصص و مهارت مدیریتی، مهارت فنی و صنعتی در امور ساختمانی، دربهای اتوماتیک و انواع شیشه ایمنی",
+        "velayat": "التزام عملی دارد",
+        "district": "۳۰",
+        "lastName": "مطیعی راد",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1938-01-03",
+        "firstName": "حسین",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "lifeStory": "عضویت در جلسات هیتهای موتلفه از سال ۱۳۴۱ الی ۱۳۴۴ _ تشکیل جلسات ۱۰ نفره  \nچهار بار دستیگری در سالهای ۴۴،۴۵،۵۷\nدو بار زندانی در سالهای ۱۳۴۴ و ۱۳۵۷",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "mobile": "09121114995",
+            "lastName": "توکلی بینا",
+            "firstName": "ابوالفضل",
+            "workAddress": "حزب موتلفه اسلامی"
+          }
+        ],
+        "sonsCount": 4,
+        "fatherName": "محمد",
+        "nationalId": "4322455085",
+        "residences": [
+          {
+            "address": "رسالت ، مجیدیه شمالی، بلوار شهید کاوسی، خیابان شهید مطیعی راد ، پلاک ۱۴"
+          }
+        ],
+        "idBookNumber": "۷۸۶",
+        "placeOfIssue": "قزوین",
+        "completedDate": "1988-05-11",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه ۳۰ حضور در جلسات ۱۰ نفره"
+          }
+        ],
+        "daughtersCount": 5,
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۳۵۸۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۳۵۸۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "حسین",
+        "lastName": "مطیعی راد",
+        "fatherName": "محمد",
+        "gender": "مرد",
+        "nationalId": "4322455085",
+        "idBookNumber": "۷۸۶",
+        "birthDate": "1938-01-03",
+        "placeOfIssue": "قزوین",
+        "religion": "شیعه",
+        "mobile": "09121217895",
+        "phone": "02144141074",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۳۰",
+        "region": "۲",
+        "residences": [
+          {
+            "address": "رسالت ، مجیدیه شمالی، بلوار شهید کاوسی، خیابان شهید مطیعی راد ، پلاک ۱۴"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "daughtersCount": 5,
+        "sonsCount": 4,
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02144246970",
+            "workAddress": "مجتمع تجاری، فاز یک بازار سنتی ستارخان",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "skills": "تخصص و مهارت مدیریتی، مهارت فنی و صنعتی در امور ساختمانی، دربهای اتوماتیک و انواع شیشه ایمنی",
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه ۳۰ حضور در جلسات ۱۰ نفره"
+          }
+        ],
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "lifeStory": "عضویت در جلسات هیتهای موتلفه از سال ۱۳۴۱ الی ۱۳۴۴ _ تشکیل جلسات ۱۰ نفره  \nچهار بار دستیگری در سالهای ۴۴،۴۵،۵۷\nدو بار زندانی در سالهای ۱۳۴۴ و ۱۳۵۷",
+        "completedDate": "1988-05-11",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "mobile": "09121114995",
+            "lastName": "توکلی بینا",
+            "firstName": "ابوالفضل",
+            "workAddress": "حزب موتلفه اسلامی"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw23d9co00ibvf5k81fxmitb",
+      "membershipNumber": "۰۰۱۰۰۳۰۵۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-04T12:27:14.713Z",
+      "expirationDate": "2027-11-04T12:27:14.708Z",
+      "person": {
+        "id": "cmw23d9ch00havf5kw5kbw9y8",
+        "firstName": "محمدجواد",
+        "lastName": "کربلائی قدیر",
+        "fatherName": "حسین",
+        "nationalId": "0045517339",
+        "birthDate": "1958-12-18",
+        "mobile": "09121502549",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "phone": "02122588958",
+        "gender": "مرد",
+        "mobile": "09121502549",
+        "region": "۳",
+        "skills": "مدیریت و اقتصاد",
+        "velayat": "التزام عملی دارد",
+        "district": "۲",
+        "lastName": "کربلائی قدیر",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1958-12-18",
+        "firstName": "محمدجواد",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "fatherName": "حسین",
+        "nationalId": "0045517339",
+        "residences": [
+          {
+            "toDate": "2026-11-04",
+            "address": "خیابان دولت چهارراه قنات خیابان شهید رحمانی بن بست مهرگان پلاک ۴",
+            "fromDate": "2026-11-04",
+            "landline": "02122588958"
+          }
+        ],
+        "idBookNumber": "۳۱۳۲",
+        "placeOfIssue": "تهران",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی"
+          },
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه ۲",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "daughtersCount": 4,
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "کارشناسی",
+            "endDate": "1985-11-04",
+            "startDate": "1977-11-04",
+            "institution": "دانشگاه علامه طبا طبا یی"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۳۰۵۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال",
+        "sacrificeRecords": [
+          {
+            "fullName": "محمدجواد کربلایی قدیر",
+            "nationalId": "۰۰۴۵۵۱۷۳۳۹",
+            "description": "سابقه جبهه ۷۳۱ روز"
+          }
+        ]
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۳۰۵۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "محمدجواد",
+        "lastName": "کربلائی قدیر",
+        "fatherName": "حسین",
+        "gender": "مرد",
+        "nationalId": "0045517339",
+        "idBookNumber": "۳۱۳۲",
+        "birthDate": "1958-12-18",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09121502549",
+        "phone": "02122588958",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۲",
+        "region": "۳",
+        "residences": [
+          {
+            "toDate": "2026-11-04",
+            "address": "خیابان دولت چهارراه قنات خیابان شهید رحمانی بن بست مهرگان پلاک ۴",
+            "fromDate": "2026-11-04",
+            "landline": "02122588958"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "daughtersCount": 4,
+        "educationHistory": [
+          {
+            "degree": "کارشناسی",
+            "endDate": "1985-11-04",
+            "startDate": "1977-11-04",
+            "institution": "دانشگاه علامه طبا طبا یی"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "skills": "مدیریت و اقتصاد",
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی"
+          },
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه ۲",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "sacrificeRecords": [
+          {
+            "fullName": "محمدجواد کربلایی قدیر",
+            "nationalId": "۰۰۴۵۵۱۷۳۳۹",
+            "description": "سابقه جبهه ۷۳۱ روز"
+          }
+        ],
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ]
+      }
+    },
+    {
+      "id": "cmw22j4ct00h7vf5kpuov4ohp",
+      "membershipNumber": "۰۰۱۰۰۲۸۳۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-04T12:03:48.558Z",
+      "expirationDate": "2027-11-04T12:03:48.549Z",
+      "person": {
+        "id": "cmw22j4cl00g6vf5krfb8uqaz",
+        "firstName": "فضل الله",
+        "lastName": "فرخ",
+        "fatherName": "محمود",
+        "nationalId": "0859035719",
+        "birthDate": "1936-05-04",
+        "mobile": "09121130753",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "آهن فروش",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "phone": "02133344334",
+        "gender": "مرد",
+        "mobile": "09121130753",
+        "region": "۱۲",
+        "skills": "امور فرهنگی، تبلیغی ، نویسندگی ، نمایشنامه نویسی ، اجرای تاتر",
+        "velayat": "التزام عملی دارد",
+        "district": "۱۹",
+        "lastName": "فرخ",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1936-05-04",
+        "firstName": "فضل الله",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "sonsCount": 2,
+        "fatherName": "محمود",
+        "nationalId": "0859035719",
+        "idBookNumber": "۳۶۷۰",
+        "placeOfIssue": "فردوس",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "کمیته انقلاب ، شورای نگهبان ، انتظامات اقامت گاه امام ، مسئول انجمن اسلامی ، شورای مرکزی ستاد نمازجمعه"
+          }
+        ],
+        "daughtersCount": 2,
+        "familyPolitics": "سه بار قبل از انقلاب ، پنج بار تحت مراقبت بودم",
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "حوزوی"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۲۸۳۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۲۸۳۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "فضل الله",
+        "lastName": "فرخ",
+        "fatherName": "محمود",
+        "gender": "مرد",
+        "nationalId": "0859035719",
+        "idBookNumber": "۳۶۷۰",
+        "birthDate": "1936-05-04",
+        "placeOfIssue": "فردوس",
+        "religion": "شیعه",
+        "mobile": "09121130753",
+        "phone": "02133344334",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۱۹",
+        "region": "۱۲",
+        "maritalStatus": "متأهل",
+        "daughtersCount": 2,
+        "sonsCount": 2,
+        "educationHistory": [
+          {
+            "degree": "حوزوی"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "آهن فروش",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "skills": "امور فرهنگی، تبلیغی ، نویسندگی ، نمایشنامه نویسی ، اجرای تاتر",
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "کمیته انقلاب ، شورای نگهبان ، انتظامات اقامت گاه امام ، مسئول انجمن اسلامی ، شورای مرکزی ستاد نمازجمعه"
+          }
+        ],
+        "familyPolitics": "سه بار قبل از انقلاب ، پنج بار تحت مراقبت بودم",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ]
+      }
+    },
+    {
+      "id": "cmw2203u700g3vf5kulmv5ph6",
+      "membershipNumber": "۰۰۱۰۰۲۷۳۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-04T11:49:01.424Z",
+      "expirationDate": "2027-11-04T11:49:01.420Z",
+      "person": {
+        "id": "cmw2203tr00f2vf5k8opu1i5t",
+        "firstName": "حسینعلی",
+        "lastName": "عظیمی گرکانی",
+        "fatherName": "مصطفی",
+        "nationalId": "0033334331",
+        "birthDate": "1989-12-06",
+        "mobile": "09126580125",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02155636686",
+            "workAddress": "بازاربزرگ چهارسوکوچک سرای رشتی ها پلاک۹"
+          }
+        ],
+        "phone": "02133120923",
+        "gender": "مرد",
+        "mobile": "09126580125",
+        "region": "۱۲",
+        "velayat": "التزام عملی دارد",
+        "district": "۱۲",
+        "lastName": "عظیمی گرکانی",
+        "province": "تهران",
+        "religion": "شیعه۰۲۱۳۳۱۲۰۹۲۱",
+        "birthDate": "1989-12-06",
+        "firstName": "حسینعلی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "lastName": "بادامه جاه",
+            "firstName": "حسین",
+            "homePhone": "02133120491",
+            "workPhone": "02155639030",
+            "workAddress": "خیابان خیام کوچه بختیاری"
+          }
+        ],
+        "sonsCount": 2,
+        "fatherName": "مصطفی",
+        "nationalId": "0033334331",
+        "idBookNumber": "۳۰۶۷۲",
+        "placeOfIssue": "تهران",
+        "completedDate": "1989-03-09",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه ۱۲",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "daughtersCount": 1,
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "زیر دیپلم"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۲۷۳۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۲۷۳۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "حسینعلی",
+        "lastName": "عظیمی گرکانی",
+        "fatherName": "مصطفی",
+        "gender": "مرد",
+        "nationalId": "0033334331",
+        "idBookNumber": "۳۰۶۷۲",
+        "birthDate": "1989-12-06",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه۰۲۱۳۳۱۲۰۹۲۱",
+        "mobile": "09126580125",
+        "phone": "02133120923",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۱۲",
+        "region": "۱۲",
+        "maritalStatus": "متأهل",
+        "daughtersCount": 1,
+        "sonsCount": 2,
+        "educationHistory": [
+          {
+            "degree": "زیر دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02155636686",
+            "workAddress": "بازاربزرگ چهارسوکوچک سرای رشتی ها پلاک۹"
+          }
+        ],
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه ۱۲",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "completedDate": "1989-03-09",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "lastName": "بادامه جاه",
+            "firstName": "حسین",
+            "homePhone": "02133120491",
+            "workPhone": "02155639030",
+            "workAddress": "خیابان خیام کوچه بختیاری"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw219wrx00ezvf5kh3q7ps7t",
+      "membershipNumber": "۰۲۵۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-04T11:28:39.213Z",
+      "expirationDate": "2027-11-04T11:28:39.212Z",
+      "person": {
+        "id": "cmw219wre00e0vf5kdl78owq4",
+        "firstName": "محمد",
+        "lastName": "طاهری جبلی",
+        "fatherName": "حیدر",
+        "nationalId": "0042447348",
+        "birthDate": "1955-12-10",
+        "mobile": "09123273701",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "workAddress": "کمیته امدادامام خمینی",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "phone": "02133038907",
+        "gender": "مرد",
+        "mobile": "09123273701",
+        "region": "۱۴",
+        "skills": "حسابداری،آموزش قرآن ،کمک های اولیه ،خبرنگاری",
+        "velayat": "التزام عملی دارد",
+        "district": "۱۸",
+        "lastName": "طاهری جبلی",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1955-12-10",
+        "firstName": "محمد",
+        "interests": [
+          "سیاسی",
+          "پژوهش"
+        ],
+        "fatherName": "حیدر",
+        "nationalId": "0042447348",
+        "idBookNumber": "۳۲۴۳",
+        "placeOfIssue": "تهران",
+        "completedDate": "1989-12-06",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی"
+          }
+        ],
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "membershipNumber": "۰۲۵۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۲۵۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "محمد",
+        "lastName": "طاهری جبلی",
+        "fatherName": "حیدر",
+        "gender": "مرد",
+        "nationalId": "0042447348",
+        "idBookNumber": "۳۲۴۳",
+        "birthDate": "1955-12-10",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09123273701",
+        "phone": "02133038907",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۱۸",
+        "region": "۱۴",
+        "maritalStatus": "متأهل",
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "workAddress": "کمیته امدادامام خمینی",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "skills": "حسابداری،آموزش قرآن ،کمک های اولیه ،خبرنگاری",
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی"
+          }
+        ],
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "پژوهش"
+        ],
+        "completedDate": "1989-12-06"
+      }
+    },
+    {
+      "id": "cmw20lera00dxvf5kkawxh1ax",
+      "membershipNumber": "۰۰۱۰۰۲۲۹۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-04T11:09:36.118Z",
+      "expirationDate": "2027-11-04T11:09:36.113Z",
+      "person": {
+        "id": "cmw20ler200cwvf5ki3rnnbr1",
+        "firstName": "محسن",
+        "lastName": "شفیق",
+        "fatherName": "حسن",
+        "nationalId": "0044251033",
+        "birthDate": "1951-10-12",
+        "mobile": "09121269370",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02188754141",
+            "workAddress": "خیابان شهید بهشتی نرسیده به میدان تختی پلاک ۱۸۱",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "phone": "02122932306",
+        "gender": "مرد",
+        "mobile": "09121269370",
+        "region": "۳",
+        "skills": "صادرات و واردات",
+        "velayat": "التزام عملی دارد",
+        "district": "۱۶",
+        "lastName": "شفیق",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1951-10-12",
+        "firstName": "محسن",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "sonsCount": 1,
+        "fatherName": "حسن",
+        "nationalId": "0044251033",
+        "idBookNumber": "۱۱۸۷",
+        "placeOfIssue": "تهران",
+        "completedDate": "1989-12-06",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی"
+          },
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه۱۶، عضو گزینش شهر تهران و استان تهران ،دبیراستان تهران",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "daughtersCount": 3,
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۲۲۹۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۲۲۹۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "محسن",
+        "lastName": "شفیق",
+        "fatherName": "حسن",
+        "gender": "مرد",
+        "nationalId": "0044251033",
+        "idBookNumber": "۱۱۸۷",
+        "birthDate": "1951-10-12",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09121269370",
+        "phone": "02122932306",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۱۶",
+        "region": "۳",
+        "maritalStatus": "متأهل",
+        "daughtersCount": 3,
+        "sonsCount": 1,
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02188754141",
+            "workAddress": "خیابان شهید بهشتی نرسیده به میدان تختی پلاک ۱۸۱",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "skills": "صادرات و واردات",
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی"
+          },
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه۱۶، عضو گزینش شهر تهران و استان تهران ،دبیراستان تهران",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "completedDate": "1989-12-06"
+      }
+    },
+    {
+      "id": "cmw1zr5lu00ctvf5kzv2lfiz2",
+      "membershipNumber": "۰۱۸۶",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-04T10:46:04.579Z",
+      "expirationDate": "2027-11-04T10:46:04.577Z",
+      "person": {
+        "id": "cmw1zr5ld00bpvf5ks5phfkcq",
+        "firstName": "سیدعلی",
+        "lastName": "رخ صفت",
+        "fatherName": "سیدابوطالب",
+        "nationalId": "0038809834",
+        "birthDate": "1939-09-05",
+        "mobile": "09121396502",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "خصوصی",
+            "workPhone": "02177650527",
+            "workAddress": "دروازه شمیران کوچه شادی صندوق فتح الزهرا",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "phone": "02122583638",
+        "gender": "مرد",
+        "mobile": "09121396502",
+        "region": "۱",
+        "skills": "صنف چوب ، امور صندوق های قرض الحسنه",
+        "velayat": "التزام عملی دارد",
+        "district": "۳۰",
+        "lastName": "رخ صفت",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1939-09-05",
+        "firstName": "سیدعلی",
+        "interests": [
+          "تبلیغات",
+          "سیاسی"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "lastName": "عسگراولادی مسلمان",
+            "firstName": "حبیب الله",
+            "homeAddress": "خیابان آبشار ابتدای خیابان ایران",
+            "workAddress": "کمیته امداد امام خمینی (ره)"
+          }
+        ],
+        "sonsCount": 4,
+        "fatherName": "سیدابوطالب",
+        "nationalId": "0038809834",
+        "idBookNumber": "۸۱۳",
+        "placeOfIssue": "تهران",
+        "completedDate": "1989-03-09",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "قائم مقام حوزه ۳۰",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "familyPolitics": "قبل از انقلاب در خصوص صندوق ذخیره جاوید چندین بار به ساواک احضار شدم",
+        "membershipDate": "1989-12-06",
+        "spouseLastName": "به فر",
+        "spouseFirstName": "اکرم سادات",
+        "educationHistory": [
+          {
+            "degree": "زیر دیپلم"
+          }
+        ],
+        "membershipNumber": "۰۱۸۶",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۱۸۶",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "سیدعلی",
+        "lastName": "رخ صفت",
+        "fatherName": "سیدابوطالب",
+        "gender": "مرد",
+        "nationalId": "0038809834",
+        "idBookNumber": "۸۱۳",
+        "birthDate": "1939-09-05",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09121396502",
+        "phone": "02122583638",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۳۰",
+        "region": "۱",
+        "maritalStatus": "متأهل",
+        "sonsCount": 4,
+        "spouseFirstName": "اکرم سادات",
+        "spouseLastName": "به فر",
+        "educationHistory": [
+          {
+            "degree": "زیر دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "خصوصی",
+            "workPhone": "02177650527",
+            "workAddress": "دروازه شمیران کوچه شادی صندوق فتح الزهرا",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "skills": "صنف چوب ، امور صندوق های قرض الحسنه",
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "قائم مقام حوزه ۳۰",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "familyPolitics": "قبل از انقلاب در خصوص صندوق ذخیره جاوید چندین بار به ساواک احضار شدم",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "interests": [
+          "تبلیغات",
+          "سیاسی"
+        ],
+        "completedDate": "1989-03-09",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "lastName": "عسگراولادی مسلمان",
+            "firstName": "حبیب الله",
+            "homeAddress": "خیابان آبشار ابتدای خیابان ایران",
+            "workAddress": "کمیته امداد امام خمینی (ره)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw1yshz400bmvf5kal0nnauk",
+      "membershipNumber": "۰۰۱۰۰۱۶۹۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-04T10:19:07.648Z",
+      "expirationDate": "2027-11-04T10:19:07.646Z",
+      "person": {
+        "id": "cmw1yshyw00alvf5kac6mmx00",
+        "firstName": "احمد",
+        "lastName": "دلشاداقدم",
+        "fatherName": "محمدجواد",
+        "nationalId": "0042631572",
+        "birthDate": "1959-08-24",
+        "mobile": "09121028918",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02133908160",
+            "workAddress": "ظهیرالاسلام کوچه رزاقی پلاک ۱۴",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "phone": "02166701438",
+        "gender": "مرد",
+        "mobile": "09121028918",
+        "region": "۱۲",
+        "skills": "صحافی ، چاپ",
+        "velayat": "التزام عملی دارد",
+        "district": "۱۹",
+        "lastName": "دلشاداقدم",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1959-08-24",
+        "firstName": "احمد",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "mobile": "09121130753",
+            "lastName": "فرخ",
+            "firstName": "فضل الله"
+          }
+        ],
+        "sonsCount": 3,
+        "fatherName": "محمدجواد",
+        "nationalId": "0042631572",
+        "idBookNumber": "۲۴۸۱",
+        "placeOfIssue": "تهران",
+        "completedDate": "1990-06-22",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "قائم مقام حوزه ۱۹",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "کاردانی"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۱۶۹۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۱۶۹۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "احمد",
+        "lastName": "دلشاداقدم",
+        "fatherName": "محمدجواد",
+        "gender": "مرد",
+        "nationalId": "0042631572",
+        "idBookNumber": "۲۴۸۱",
+        "birthDate": "1959-08-24",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09121028918",
+        "phone": "02166701438",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۱۹",
+        "region": "۱۲",
+        "maritalStatus": "متأهل",
+        "sonsCount": 3,
+        "educationHistory": [
+          {
+            "degree": "کاردانی"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workPhone": "02133908160",
+            "workAddress": "ظهیرالاسلام کوچه رزاقی پلاک ۱۴",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "skills": "صحافی ، چاپ",
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "قائم مقام حوزه ۱۹",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "completedDate": "1990-06-22",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "mobile": "09121130753",
+            "lastName": "فرخ",
+            "firstName": "فضل الله"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw1xolyv00aivf5k6wfi30vr",
+      "membershipNumber": "۰۰۱۰۰۱۵۵۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-04T09:48:06.584Z",
+      "expirationDate": "2027-11-04T09:48:06.579Z",
+      "person": {
+        "id": "cmw1xolym009fvf5k0ve7r13x",
+        "firstName": "ابراهیم",
+        "lastName": "خلیلیان گورتانی",
+        "fatherName": "اسداله",
+        "nationalId": "1290051291",
+        "birthDate": "1954-03-21",
+        "mobile": "09924230989",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "jobType": "آمورش وپرورش",
+            "workPhone": "02133551438",
+            "workAddress": "خیابان ایران هنرستان شهید مقدم",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "phone": "02122063084",
+        "gender": "مرد",
+        "mobile": "09924230989",
+        "region": "۱",
+        "skills": "تدریس درآموزش وپرورش ،فعالیت های آموزشی و تربیتی ، کتاب فروشی",
+        "velayat": "التزام عملی دارد",
+        "district": "۴",
+        "lastName": "خلیلیان گورتانی",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1954-03-21",
+        "firstName": "ابراهیم",
+        "interests": [
+          "سیاسی",
+          "آموزش"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "lastName": "پرورش",
+            "firstName": "علی اکبر",
+            "workAddress": "مجلس شورای اسلامی"
+          }
+        ],
+        "sonsCount": 2,
+        "fatherName": "اسداله",
+        "nationalId": "1290051291",
+        "idBookNumber": "۳",
+        "placeOfIssue": "اصفهان",
+        "completedDate": "1990-12-09",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "حزب جمهوری اسلامی (اراک، زابل، تهران ، اصفهان)"
+          },
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "رئیس شورای امر به معروف و نهی از منکر استان تهران ، مدیر حوزه ۴",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "daughtersCount": 1,
+        "familyPolitics": "دستگیری دو بار درسالهای ۱۳۵۱ و ۱۳۵۲ پس از بازجویی آزاد شده",
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "کارشناسی"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۱۵۵۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipDate": "1989-12-06",
+        "membershipNumber": "۰۰۱۰۰۱۵۵۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال",
+        "firstName": "ابراهیم",
+        "lastName": "خلیلیان گورتانی",
+        "fatherName": "اسداله",
+        "gender": "مرد",
+        "nationalId": "1290051291",
+        "idBookNumber": "۳",
+        "birthDate": "1954-03-21",
+        "placeOfIssue": "اصفهان",
+        "religion": "شیعه",
+        "mobile": "09924230989",
+        "phone": "02122063084",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۴",
+        "region": "۱",
+        "maritalStatus": "متأهل",
+        "daughtersCount": 1,
+        "sonsCount": 2,
+        "educationHistory": [
+          {
+            "degree": "کارشناسی"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "jobType": "آمورش وپرورش",
+            "workPhone": "02133551438",
+            "workAddress": "خیابان ایران هنرستان شهید مقدم",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "skills": "تدریس درآموزش وپرورش ،فعالیت های آموزشی و تربیتی ، کتاب فروشی",
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "حزب جمهوری اسلامی (اراک، زابل، تهران ، اصفهان)"
+          },
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "رئیس شورای امر به معروف و نهی از منکر استان تهران ، مدیر حوزه ۴",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "familyPolitics": "دستگیری دو بار درسالهای ۱۳۵۱ و ۱۳۵۲ پس از بازجویی آزاد شده",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "آموزش"
+        ],
+        "completedDate": "1990-12-09",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "lastName": "پرورش",
+            "firstName": "علی اکبر",
+            "workAddress": "مجلس شورای اسلامی"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw1wq2gd009cvf5kbh01admr",
+      "membershipNumber": "۰۰۱۰۰۱۳۲۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-04T09:21:14.989Z",
+      "expirationDate": "2027-11-04T09:21:14.981Z",
+      "person": {
+        "id": "cmw1wq2g3008evf5k586rby6w",
+        "firstName": "اکبر",
+        "lastName": "صالحی صفت",
+        "fatherName": "محمود",
+        "nationalId": null,
+        "birthDate": null,
+        "mobile": "09125332898",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "workPhone": "02188906093",
+            "workAddress": "خیابان سپهبدقرنی نبش طالقانی فورشگاه قدس",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "phone": "02188402298",
+        "gender": "مرد",
+        "mobile": "09125332898",
+        "region": "۳",
+        "skills": "امور تدارکات ،بازرگانی، فرهنگی ، خدمات",
+        "velayat": "التزام عملی دارد",
+        "district": "۲۰",
+        "lastName": "صالحی صفت",
+        "province": "تهران",
+        "firstName": "اکبر",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "duration": "ازدوران جوانی",
+            "lastName": "عسگراولادی مسلمان",
+            "firstName": "حبیب الله",
+            "homeAddress": "خیابان آبشار ابتدای خیابان ایران",
+            "workAddress": "کمیته امدادامام خمینی (ره)"
+          }
+        ],
+        "sonsCount": 1,
+        "fatherName": "محمود",
+        "familiarity": "ازدوران جوانی",
+        "completedDate": "2009-03-09",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه ۲۰ ، شرکت در جلسات ۱۰نفره",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "daughtersCount": 4,
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "سایر"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۱۳۲۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۱۳۲۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "اکبر",
+        "lastName": "صالحی صفت",
+        "fatherName": "محمود",
+        "gender": "مرد",
+        "mobile": "09125332898",
+        "phone": "02188402298",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۲۰",
+        "region": "۳",
+        "maritalStatus": "متأهل",
+        "daughtersCount": 4,
+        "sonsCount": 1,
+        "educationHistory": [
+          {
+            "degree": "سایر"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "workPhone": "02188906093",
+            "workAddress": "خیابان سپهبدقرنی نبش طالقانی فورشگاه قدس",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "skills": "امور تدارکات ،بازرگانی، فرهنگی ، خدمات",
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مدیر حوزه ۲۰ ، شرکت در جلسات ۱۰نفره",
+            "toDate": "2026-11-04",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "familiarity": "ازدوران جوانی",
+        "goal": "تشکیل جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "completedDate": "2009-03-09",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "duration": "ازدوران جوانی",
+            "lastName": "عسگراولادی مسلمان",
+            "firstName": "حبیب الله",
+            "homeAddress": "خیابان آبشار ابتدای خیابان ایران",
+            "workAddress": "کمیته امدادامام خمینی (ره)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw0tdtab007dvf5knn9y0h7t",
+      "membershipNumber": "۰۰۱۰۰۱۱۴۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-03T14:59:58.212Z",
+      "expirationDate": "2027-11-03T14:59:58.208Z",
+      "person": {
+        "id": "cmw0tdta4006avf5k6md5y7eb",
+        "firstName": "مجید",
+        "lastName": "حاجی حیدری",
+        "fatherName": "محمود",
+        "nationalId": "0042852099",
+        "birthDate": "1964-04-21",
+        "mobile": "09121191470",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "ایجاد جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workAddress": "خیابان شریعتی خیابان کارگر پلاک ۱۲",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "phone": "02177634956",
+        "gender": "مرد",
+        "mobile": "09121191470",
+        "region": "۱۲",
+        "skills": "سیستمهای حفاظتی شامل اعلام سرقت و اعلام حریق.آیفون تصویری",
+        "district": "۷",
+        "lastName": "حاجی حیدری",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1964-04-21",
+        "firstName": "مجید",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "duration": "اززمان تولد",
+            "lastName": "عسگراولادی مسلمان",
+            "firstName": "حبیب الله",
+            "homeAddress": "خیابان آبشار ابتدای خیابان ایران",
+            "workAddress": "کمیته امداد امام خمینی (ره)"
+          }
+        ],
+        "sonsCount": 1,
+        "fatherName": "محمود",
+        "nationalId": "0042852099",
+        "residences": [
+          {
+            "address": "خیابان ولیعصرخیابان صدر پلاک۲۱",
+            "landline": "02177634956"
+          }
+        ],
+        "familiarity": "از دوران جوانی",
+        "idBookNumber": "۴۰۳",
+        "placeOfIssue": "تهران",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "تا زمان انحلال"
+          },
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مشاوردبیراجرایی ، مدیر حوزه ۷",
+            "toDate": "2026-11-03",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "daughtersCount": 2,
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "familyBackground": "از دوران جوانی",
+        "membershipNumber": "۰۰۱۰۰۱۱۴۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۱۱۴۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "مجید",
+        "lastName": "حاجی حیدری",
+        "fatherName": "محمود",
+        "gender": "مرد",
+        "nationalId": "0042852099",
+        "idBookNumber": "۴۰۳",
+        "birthDate": "1964-04-21",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09121191470",
+        "phone": "02177634956",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۷",
+        "region": "۱۲",
+        "residences": [
+          {
+            "address": "خیابان ولیعصرخیابان صدر پلاک۲۱",
+            "landline": "02177634956"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "daughtersCount": 2,
+        "sonsCount": 1,
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "workAddress": "خیابان شریعتی خیابان کارگر پلاک ۱۲",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "skills": "سیستمهای حفاظتی شامل اعلام سرقت و اعلام حریق.آیفون تصویری",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی",
+            "notes": "تا زمان انحلال"
+          },
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "مشاوردبیراجرایی ، مدیر حوزه ۷",
+            "toDate": "2026-11-03",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "familyBackground": "از دوران جوانی",
+        "familiarity": "از دوران جوانی",
+        "goal": "ایجاد جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "duration": "اززمان تولد",
+            "lastName": "عسگراولادی مسلمان",
+            "firstName": "حبیب الله",
+            "homeAddress": "خیابان آبشار ابتدای خیابان ایران",
+            "workAddress": "کمیته امداد امام خمینی (ره)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw0sh0st0067vf5khetb91de",
+      "membershipNumber": "۰۰۱۰۰۱۳۰۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-03T14:34:28.301Z",
+      "expirationDate": "2027-11-03T14:34:28.300Z",
+      "person": {
+        "id": "cmw0sh0sf005bvf5ksuipux3m",
+        "firstName": "سید اکبر",
+        "lastName": "حسینی",
+        "fatherName": "سید خلیل",
+        "nationalId": "5389524799",
+        "birthDate": "1942-06-23",
+        "mobile": "09121966760",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "jobs": [
+          {
+            "jobType": "فرش فروش",
+            "workAddress": "تهران بازار سرای قدس پلاک ۸۲",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "phone": "02166629899",
+        "gender": "مرد",
+        "mobile": "09121966760",
+        "skills": "۶ سال آموزش قالیبافی و ایجاد کارگاه هنر سه گانه فرش",
+        "lastName": "حسینی",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1942-06-23",
+        "firstName": "سید اکبر",
+        "sonsCount": 2,
+        "fatherName": "سید خلیل",
+        "nationalId": "5389524799",
+        "residences": [
+          {
+            "address": "انتهای خیابان کمیل پلاک ۸۳۳"
+          }
+        ],
+        "idBookNumber": "۱۳۰",
+        "placeOfIssue": "کله سر",
+        "maritalStatus": "متأهل",
+        "daughtersCount": 3,
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "حوزوی"
+          },
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "familyBackground": "۳۰ سال خدمت در نماز جمعه \n۳۰ سال کاروان مدیریت حج",
+        "membershipNumber": "۰۰۱۰۰۱۳۰۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۱۳۰۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "سید اکبر",
+        "lastName": "حسینی",
+        "fatherName": "سید خلیل",
+        "gender": "مرد",
+        "nationalId": "5389524799",
+        "idBookNumber": "۱۳۰",
+        "birthDate": "1942-06-23",
+        "placeOfIssue": "کله سر",
+        "religion": "شیعه",
+        "mobile": "09121966760",
+        "phone": "02166629899",
+        "province": "تهران",
+        "city": "تهران",
+        "residences": [
+          {
+            "address": "انتهای خیابان کمیل پلاک ۸۳۳"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "daughtersCount": 3,
+        "sonsCount": 2,
+        "educationHistory": [
+          {
+            "degree": "حوزوی"
+          },
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "jobType": "فرش فروش",
+            "workAddress": "تهران بازار سرای قدس پلاک ۸۲",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "skills": "۶ سال آموزش قالیبافی و ایجاد کارگاه هنر سه گانه فرش",
+        "familyBackground": "۳۰ سال خدمت در نماز جمعه \n۳۰ سال کاروان مدیریت حج"
+      }
+    },
+    {
+      "id": "cmw0rzb4e004fvf5k3z896iqy",
+      "membershipNumber": "۰۰۱۰۰۰۶۴۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-03T14:20:41.870Z",
+      "expirationDate": "2027-11-03T14:20:41.865Z",
+      "person": {
+        "id": "cmw0rzb49003kvf5kpwrsy6vn",
+        "firstName": "حسین",
+        "lastName": "بادامه جاه",
+        "fatherName": "محمدباقر",
+        "nationalId": null,
+        "birthDate": "1960-07-23",
+        "mobile": "00000000000",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "فرش فروش",
+            "workAddress": "بازار کفاش ها",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "phone": "02155600897",
+        "gender": "مرد",
+        "mobile": "00000000000",
+        "region": "۱۲",
+        "lastName": "بادامه جاه",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1960-07-23",
+        "firstName": "حسین",
+        "sonsCount": 1,
+        "fatherName": "محمدباقر",
+        "residences": [
+          {}
+        ],
+        "idBookNumber": "۱۰۶۲۱۳۳۹",
+        "placeOfIssue": "تهران",
+        "maritalStatus": "متأهل",
+        "daughtersCount": 2,
+        "membershipDate": "1989-10-07",
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "familyBackground": "شرکت در تظاهرات قبل از انقلاب",
+        "membershipNumber": "۰۰۱۰۰۰۶۴۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۰۶۴۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-10-07",
+        "membershipStatus": "فعال",
+        "firstName": "حسین",
+        "lastName": "بادامه جاه",
+        "fatherName": "محمدباقر",
+        "gender": "مرد",
+        "idBookNumber": "۱۰۶۲۱۳۳۹",
+        "birthDate": "1960-07-23",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "00000000000",
+        "phone": "02155600897",
+        "province": "تهران",
+        "city": "تهران",
+        "region": "۱۲",
+        "residences": [
+          {}
+        ],
+        "maritalStatus": "متأهل",
+        "daughtersCount": 2,
+        "sonsCount": 1,
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "فرش فروش",
+            "workAddress": "بازار کفاش ها",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "familyBackground": "شرکت در تظاهرات قبل از انقلاب"
+      }
+    },
+    {
+      "id": "cmw0ruoc8003hvf5kd5oaoncc",
+      "membershipNumber": "۰۰۱۰۰۰۴۶۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-03T14:17:05.721Z",
+      "expirationDate": "2027-11-03T14:17:05.720Z",
+      "person": {
+        "id": "cmw0ruobz002fvf5kvnn1k9bq",
+        "firstName": "محمدعلی",
+        "lastName": "امانی همدانی",
+        "fatherName": "سعید",
+        "nationalId": "0047215550",
+        "birthDate": "1960-11-10",
+        "mobile": "09121110452",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "ایجاد جامعه نمونه اسلامی",
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "phone": "02133553445",
+        "gender": "مرد",
+        "mobile": "09121110452",
+        "region": "۱۲",
+        "velayat": "التزام عملی دارد",
+        "district": "۱",
+        "lastName": "امانی همدانی",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1960-11-10",
+        "firstName": "محمدعلی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "duration": "اززمان تولد",
+            "lastName": "بادامچیان",
+            "firstName": "اسدالله",
+            "workPhone": "02188822923",
+            "workAddress": "خیابان خردمند جنوبی نبش خیابان یگانه پلاک ۴۴"
+          }
+        ],
+        "sonsCount": 2,
+        "trainings": [
+          {
+            "date": "2018-06-30",
+            "notes": "مدیریت حرفه ای کسب و کار",
+            "trainingType": "MBA"
+          }
+        ],
+        "fatherName": "سعید",
+        "nationalId": "0047215550",
+        "residences": [
+          {
+            "toDate": "2026-11-03",
+            "address": "تهران خیابان ایران خیابان شهیدگل محمدی پلاک ۲۶",
+            "landline": "02133553445"
+          }
+        ],
+        "familiarity": "از دوره جوانی",
+        "idBookNumber": "۱۵۵۲",
+        "placeOfIssue": "تهران",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "دبیر کل",
+            "notes": "عضو شورای مرکزی ، فعالیت در واحد اداری و مالی ،تبلیغات ومسئول تشکیلات ،دبیر شهر تهران ، قائم مقام دبیر اجرایی و دبیر اجرایی ،\nعضو حزب جمهوری اسلامی ، امور اجرایی ستاد انتخابات جامعه روحانیت و تشکل های همسو ، مسئول امور اجرایی شورای هماهنگی انقلاب اسلامی",
+            "toDate": "2026-11-03",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "کاردانی",
+            "endDate": "2018-06-30",
+            "startDate": "2017-12-23",
+            "institution": "فن پردازان"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۰۴۶۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۰۴۶۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "محمدعلی",
+        "lastName": "امانی همدانی",
+        "fatherName": "سعید",
+        "gender": "مرد",
+        "nationalId": "0047215550",
+        "idBookNumber": "۱۵۵۲",
+        "birthDate": "1960-11-10",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09121110452",
+        "phone": "02133553445",
+        "province": "تهران",
+        "city": "تهران",
+        "district": "۱",
+        "region": "۱۲",
+        "residences": [
+          {
+            "toDate": "2026-11-03",
+            "address": "تهران خیابان ایران خیابان شهیدگل محمدی پلاک ۲۶",
+            "landline": "02133553445"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "sonsCount": 2,
+        "educationHistory": [
+          {
+            "degree": "کاردانی",
+            "endDate": "2018-06-30",
+            "startDate": "2017-12-23",
+            "institution": "فن پردازان"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "employmentState": "پایان یافته"
+          }
+        ],
+        "velayat": "التزام عملی دارد",
+        "partiesGroups": [
+          {
+            "name": "حزب موتلفه اسلامی",
+            "role": "دبیر کل",
+            "notes": "عضو شورای مرکزی ، فعالیت در واحد اداری و مالی ،تبلیغات ومسئول تشکیلات ،دبیر شهر تهران ، قائم مقام دبیر اجرایی و دبیر اجرایی ،\nعضو حزب جمهوری اسلامی ، امور اجرایی ستاد انتخابات جامعه روحانیت و تشکل های همسو ، مسئول امور اجرایی شورای هماهنگی انقلاب اسلامی",
+            "toDate": "2026-11-03",
+            "fromDate": "1989-12-06"
+          }
+        ],
+        "trainings": [
+          {
+            "date": "2018-06-30",
+            "notes": "مدیریت حرفه ای کسب و کار",
+            "trainingType": "MBA"
+          }
+        ],
+        "familiarity": "از دوره جوانی",
+        "goal": "ایجاد جامعه نمونه اسلامی",
+        "interests": [
+          "سیاسی",
+          "تبلیغات"
+        ],
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "duration": "اززمان تولد",
+            "lastName": "بادامچیان",
+            "firstName": "اسدالله",
+            "workPhone": "02188822923",
+            "workAddress": "خیابان خردمند جنوبی نبش خیابان یگانه پلاک ۴۴"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw0rdzf5002cvf5kmfrmvgeb",
+      "membershipNumber": "۰۲۱",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-03T14:04:06.929Z",
+      "expirationDate": "2027-11-03T14:04:06.925Z",
+      "person": {
+        "id": "cmw0rdzes001jvf5kjhu9bk74",
+        "firstName": "علی",
+        "lastName": "احمدی نیا",
+        "fatherName": "محمدحسین",
+        "nationalId": null,
+        "birthDate": "1948-05-14",
+        "mobile": "00000000000",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "فرش فروش",
+            "workPhone": "02155624159",
+            "workAddress": "سرای بوعلی حیاط بانک سپه پلاک ۴۰",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "phone": "02133125524",
+        "gender": "مرد",
+        "mobile": "00000000000",
+        "region": "۱۴",
+        "lastName": "احمدی نیا",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1948-05-14",
+        "firstName": "علی",
+        "fatherName": "محمدحسین",
+        "residences": [
+          {
+            "address": "میدان شهدا خیابان ۱۷ شهریور بمبست شهران پلاک ۲۱"
+          }
+        ],
+        "idBookNumber": "۱۱۲",
+        "placeOfIssue": "کاشان",
+        "maritalStatus": "متأهل",
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی"
+          }
+        ],
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "membershipNumber": "۰۲۱",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۲۱",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "علی",
+        "lastName": "احمدی نیا",
+        "fatherName": "محمدحسین",
+        "gender": "مرد",
+        "idBookNumber": "۱۱۲",
+        "birthDate": "1948-05-14",
+        "placeOfIssue": "کاشان",
+        "religion": "شیعه",
+        "mobile": "00000000000",
+        "phone": "02133125524",
+        "province": "تهران",
+        "city": "تهران",
+        "region": "۱۴",
+        "residences": [
+          {
+            "address": "میدان شهدا خیابان ۱۷ شهریور بمبست شهران پلاک ۲۱"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "فرش فروش",
+            "workPhone": "02155624159",
+            "workAddress": "سرای بوعلی حیاط بانک سپه پلاک ۴۰",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "partiesGroups": [
+          {
+            "name": "حزب جمهوری اسلامی"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cmw0qttzj001gvf5kbnbeyn40",
+      "membershipNumber": "۰۰۱۰۰۰۴۴۰۰۱۶۸۰۰۷",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-11-03T13:48:26.768Z",
+      "expirationDate": "2027-11-03T13:48:26.764Z",
+      "person": {
+        "id": "cmw0qttz6000lvf5k923uim4p",
+        "firstName": "ابراهیم",
+        "lastName": "اکبری مقدم",
+        "fatherName": "حسین",
+        "nationalId": "1263118801",
+        "birthDate": "1950-07-23",
+        "mobile": "09123903185",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 6,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "استان",
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "startDate": "2026-11-03",
+            "workAddress": "خیابان آفریقا بین میرداماد و ظفر روبه روی پارک صبا مجتمع اقتصادی کمیته امداد",
+            "employmentState": "پایان یافته"
+          },
+          {
+            "sector": "دولتی",
+            "employmentState": "پایان یافته"
+          },
+          {
+            "sector": "دولتی",
+            "employmentState": "پایان یافته"
+          },
+          {
+            "sector": "دولتی"
+          }
+        ],
+        "phone": "02177819346",
+        "gender": "مرد",
+        "mobile": "09123903185",
+        "lastName": "اکبری مقدم",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1950-07-23",
+        "firstName": "ابراهیم",
+        "sonsCount": 2,
+        "fatherName": "حسین",
+        "nationalId": "1263118801",
+        "residences": [
+          {
+            "address": "نارمک خیابان سمنگان  خیابان شهید ...  پلاک ۴۹ طبقه سوم"
+          }
+        ],
+        "familiarity": "از زمان قبل از انقلاب اسلامی تا پیروزی انقلاب در رابطه با پخش اعلامیه های حضرت امام با جمعی از برادران در تظاهرات شرکت داشتم و بعد از پیروزی از زمان تشکیل حزب جمهوری اسلامی تا زمان تعطیلی آن به طور مرب فعالیت داشته ام",
+        "idBookNumber": "۹",
+        "placeOfIssue": "تهران",
+        "maritalStatus": "متأهل",
+        "daughtersCount": 2,
+        "membershipDate": "1989-12-06",
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "membershipNumber": "۰۰۱۰۰۰۴۴۰۰۱۶۸۰۰۷",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "۰۰۱۰۰۰۴۴۰۰۱۶۸۰۰۷",
+        "membershipDate": "1989-12-06",
+        "membershipStatus": "فعال",
+        "firstName": "ابراهیم",
+        "lastName": "اکبری مقدم",
+        "fatherName": "حسین",
+        "gender": "مرد",
+        "nationalId": "1263118801",
+        "idBookNumber": "۹",
+        "birthDate": "1950-07-23",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "mobile": "09123903185",
+        "phone": "02177819346",
+        "province": "تهران",
+        "city": "استان",
+        "residences": [
+          {
+            "address": "نارمک خیابان سمنگان  خیابان شهید ...  پلاک ۴۹ طبقه سوم"
+          }
+        ],
+        "maritalStatus": "متأهل",
+        "daughtersCount": 2,
+        "sonsCount": 2,
+        "educationHistory": [
+          {
+            "degree": "دیپلم"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "دولتی",
+            "startDate": "2026-11-03",
+            "workAddress": "خیابان آفریقا بین میرداماد و ظفر روبه روی پارک صبا مجتمع اقتصادی کمیته امداد",
+            "employmentState": "پایان یافته"
+          },
+          {
+            "sector": "دولتی",
+            "employmentState": "پایان یافته"
+          },
+          {
+            "sector": "دولتی",
+            "employmentState": "پایان یافته"
+          },
+          {
+            "sector": "دولتی"
+          }
+        ],
+        "familiarity": "از زمان قبل از انقلاب اسلامی تا پیروزی انقلاب در رابطه با پخش اعلامیه های حضرت امام با جمعی از برادران در تظاهرات شرکت داشتم و بعد از پیروزی از زمان تشکیل حزب جمهوری اسلامی تا زمان تعطیلی آن به طور مرب فعالیت داشته ام"
+      }
+    },
+    {
+      "id": "cmvwi0wr3001pvf7s3ltrztg5",
+      "membershipNumber": "0010422201",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-10-31T14:30:55.695Z",
+      "expirationDate": "2027-10-31T14:30:55.695Z",
+      "person": {
+        "id": "cmvwho7e80005vf7s5l30qqxy",
+        "firstName": "مهدی",
+        "lastName": "امامی امناب",
+        "fatherName": "احمد",
+        "nationalId": "0410478628",
+        "birthDate": "1996-03-19",
+        "mobile": "09393735954",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 3,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "جهت پیش رفت و سربلندی ج.ا.ا",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "حسابدار",
+            "startDate": "2026-10-31",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "phone": "02155046039",
+        "gender": "مرد",
+        "mobile": "09393735954",
+        "skills": "حسابداری، فرهنگی ، ورزشی",
+        "consent": true,
+        "velayat": "ولی فقیه خوب، عادل و با تقوی، توام با هوشیاری کامل",
+        "lastName": "امامی امناب",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1996-03-19",
+        "firstName": "مهدی",
+        "marjaName": "امام خامنه ای",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "mobile": "09125006963",
+            "lastName": "خابوری",
+            "firstName": "غلامرضا",
+            "homeAddress": "تهران،17 شهریورجنوبی، خ منصور غربی، پ 914",
+            "workAddress": "بازنشسته وزارت صنایع",
+            "relationship": "دوست مسجدی"
+          }
+        ],
+        "trainings": [
+          {
+            "trainingType": "حلقه های صالحین و برنامه های بسیج"
+          }
+        ],
+        "cyberspace": "معمولی",
+        "fatherName": "احمد",
+        "nationalId": "0410478628",
+        "residences": [
+          {
+            "address": "خ شوش شرقی، خ ارج، کوچه کریمی، پ 11",
+            "landline": "02155046039",
+            "postalCode": "1183987311"
+          }
+        ],
+        "familiarity": "از 1401",
+        "feeAccepted": true,
+        "idBookNumber": "0410478628",
+        "placeOfIssue": "تهران",
+        "virtualPhone": "09393735954",
+        "completedDate": "2023-03-01",
+        "maritalStatus": "مجرد",
+        "partiesGroups": [
+          {
+            "name": "بسیج",
+            "toDate": "2026-10-31",
+            "fromDate": "2026-10-31"
+          }
+        ],
+        "commitmentDate": "2023-03-06",
+        "familyPolitics": "خیر",
+        "membershipDate": "2026-10-31",
+        "signatureStatus": "نسخه کاغذی امضا شده است",
+        "educationHistory": [
+          {
+            "degree": "کاردانی",
+            "endDate": "2026-10-31",
+            "startDate": "2026-10-31",
+            "institution": "دانشگاه حقوق محمد رسول الله"
+          }
+        ],
+        "familyBackground": "نیروی انسانی بسیج، حفاظت اطلاعات بسیج محلات، جانشین تربیت بدنی، امور باشگاه فوتبال",
+        "membershipNumber": "0010422201",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "0010422201",
+        "membershipDate": "2026-10-31",
+        "membershipStatus": "فعال",
+        "firstName": "مهدی",
+        "lastName": "امامی امناب",
+        "fatherName": "احمد",
+        "gender": "مرد",
+        "nationalId": "0410478628",
+        "idBookNumber": "0410478628",
+        "birthDate": "1996-03-19",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "marjaName": "امام خامنه ای",
+        "mobile": "09393735954",
+        "phone": "02155046039",
+        "virtualPhone": "09393735954",
+        "province": "تهران",
+        "city": "تهران",
+        "residences": [
+          {
+            "address": "خ شوش شرقی، خ ارج، کوچه کریمی، پ 11",
+            "landline": "02155046039",
+            "postalCode": "1183987311"
+          }
+        ],
+        "maritalStatus": "مجرد",
+        "educationHistory": [
+          {
+            "degree": "کاردانی",
+            "endDate": "2026-10-31",
+            "startDate": "2026-10-31",
+            "institution": "دانشگاه حقوق محمد رسول الله"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "حسابدار",
+            "startDate": "2026-10-31",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "skills": "حسابداری، فرهنگی ، ورزشی",
+        "velayat": "ولی فقیه خوب، عادل و با تقوی، توام با هوشیاری کامل",
+        "partiesGroups": [
+          {
+            "name": "بسیج",
+            "toDate": "2026-10-31",
+            "fromDate": "2026-10-31"
+          }
+        ],
+        "familyPolitics": "خیر",
+        "familyBackground": "نیروی انسانی بسیج، حفاظت اطلاعات بسیج محلات، جانشین تربیت بدنی، امور باشگاه فوتبال",
+        "trainings": [
+          {
+            "trainingType": "حلقه های صالحین و برنامه های بسیج"
+          }
+        ],
+        "familiarity": "از 1401",
+        "goal": "جهت پیش رفت و سربلندی ج.ا.ا",
+        "cyberspace": "معمولی",
+        "completedDate": "2023-03-01",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "mobile": "09125006963",
+            "lastName": "خابوری",
+            "firstName": "غلامرضا",
+            "homeAddress": "تهران،17 شهریورجنوبی، خ منصور غربی، پ 914",
+            "workAddress": "بازنشسته وزارت صنایع",
+            "relationship": "دوست مسجدی"
+          }
+        ],
+        "consent": true,
+        "commitmentDate": "2023-03-06",
+        "feeAccepted": true,
+        "signatureStatus": "نسخه کاغذی امضا شده است"
+      }
+    }
+  ]
+}

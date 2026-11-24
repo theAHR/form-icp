@@ -1,0 +1,190 @@
+{
+  "exportedAt": "2026-11-02T14:22:47.622Z",
+  "count": 1,
+  "members": [
+    {
+      "id": "cmvwi0wr3001pvf7s3ltrztg5",
+      "membershipNumber": "0010422201",
+      "membershipType": "عادی",
+      "status": "ACTIVE",
+      "startDate": "2026-10-31T14:30:55.695Z",
+      "expirationDate": "2027-10-31T14:30:55.695Z",
+      "person": {
+        "id": "cmvwho7e80005vf7s5l30qqxy",
+        "firstName": "مهدی",
+        "lastName": "امامی امناب",
+        "fatherName": "احمد",
+        "nationalId": "0410478628",
+        "birthDate": "1996-03-19",
+        "mobile": "09393735954",
+        "email": null,
+        "photoId": null,
+        "status": "MEMBER"
+      },
+      "registrarNotes": null,
+      "formVersion": {
+        "number": 3,
+        "slug": "membership-application",
+        "title": "ثبت اطلاعات فردی اعضا"
+      },
+      "formData": {
+        "city": "تهران",
+        "goal": "جهت پیش رفت و سربلندی ج.ا.ا",
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "حسابدار",
+            "startDate": "2026-10-31",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "phone": "02155046039",
+        "gender": "مرد",
+        "mobile": "09393735954",
+        "skills": "حسابداری، فرهنگی ، ورزشی",
+        "consent": true,
+        "velayat": "ولی فقیه خوب، عادل و با تقوی، توام با هوشیاری کامل",
+        "lastName": "امامی امناب",
+        "province": "تهران",
+        "religion": "شیعه",
+        "birthDate": "1996-03-19",
+        "firstName": "مهدی",
+        "marjaName": "امام خامنه ای",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "mobile": "09125006963",
+            "lastName": "خابوری",
+            "firstName": "غلامرضا",
+            "homeAddress": "تهران،17 شهریورجنوبی، خ منصور غربی، پ 914",
+            "workAddress": "بازنشسته وزارت صنایع",
+            "relationship": "دوست مسجدی"
+          }
+        ],
+        "trainings": [
+          {
+            "trainingType": "حلقه های صالحین و برنامه های بسیج"
+          }
+        ],
+        "cyberspace": "معمولی",
+        "fatherName": "احمد",
+        "nationalId": "0410478628",
+        "residences": [
+          {
+            "address": "خ شوش شرقی، خ ارج، کوچه کریمی، پ 11",
+            "landline": "02155046039",
+            "postalCode": "1183987311"
+          }
+        ],
+        "familiarity": "از 1401",
+        "feeAccepted": true,
+        "idBookNumber": "0410478628",
+        "placeOfIssue": "تهران",
+        "virtualPhone": "09393735954",
+        "completedDate": "2023-03-01",
+        "maritalStatus": "مجرد",
+        "partiesGroups": [
+          {
+            "name": "بسیج",
+            "toDate": "2026-10-31",
+            "fromDate": "2026-10-31"
+          }
+        ],
+        "commitmentDate": "2023-03-06",
+        "familyPolitics": "خیر",
+        "membershipDate": "2026-10-31",
+        "signatureStatus": "نسخه کاغذی امضا شده است",
+        "educationHistory": [
+          {
+            "degree": "کاردانی",
+            "endDate": "2026-10-31",
+            "startDate": "2026-10-31",
+            "institution": "دانشگاه حقوق محمد رسول الله"
+          }
+        ],
+        "familyBackground": "نیروی انسانی بسیج، حفاظت اطلاعات بسیج محلات، جانشین تربیت بدنی، امور باشگاه فوتبال",
+        "membershipNumber": "0010422201",
+        "membershipStatus": "فعال"
+      },
+      "formValues": {
+        "membershipNumber": "0010422201",
+        "membershipDate": "2026-10-31",
+        "membershipStatus": "فعال",
+        "firstName": "مهدی",
+        "lastName": "امامی امناب",
+        "fatherName": "احمد",
+        "gender": "مرد",
+        "nationalId": "0410478628",
+        "idBookNumber": "0410478628",
+        "birthDate": "1996-03-19",
+        "placeOfIssue": "تهران",
+        "religion": "شیعه",
+        "marjaName": "امام خامنه ای",
+        "mobile": "09393735954",
+        "phone": "02155046039",
+        "virtualPhone": "09393735954",
+        "province": "تهران",
+        "city": "تهران",
+        "residences": [
+          {
+            "address": "خ شوش شرقی، خ ارج، کوچه کریمی، پ 11",
+            "landline": "02155046039",
+            "postalCode": "1183987311"
+          }
+        ],
+        "maritalStatus": "مجرد",
+        "educationHistory": [
+          {
+            "degree": "کاردانی",
+            "endDate": "2026-10-31",
+            "startDate": "2026-10-31",
+            "institution": "دانشگاه حقوق محمد رسول الله"
+          }
+        ],
+        "jobs": [
+          {
+            "sector": "آزاد",
+            "jobType": "حسابدار",
+            "startDate": "2026-10-31",
+            "employmentState": "در حال اشتغال"
+          }
+        ],
+        "skills": "حسابداری، فرهنگی ، ورزشی",
+        "velayat": "ولی فقیه خوب، عادل و با تقوی، توام با هوشیاری کامل",
+        "partiesGroups": [
+          {
+            "name": "بسیج",
+            "toDate": "2026-10-31",
+            "fromDate": "2026-10-31"
+          }
+        ],
+        "familyPolitics": "خیر",
+        "familyBackground": "نیروی انسانی بسیج، حفاظت اطلاعات بسیج محلات، جانشین تربیت بدنی، امور باشگاه فوتبال",
+        "trainings": [
+          {
+            "trainingType": "حلقه های صالحین و برنامه های بسیج"
+          }
+        ],
+        "familiarity": "از 1401",
+        "goal": "جهت پیش رفت و سربلندی ج.ا.ا",
+        "cyberspace": "معمولی",
+        "completedDate": "2023-03-01",
+        "referrers": [
+          {
+            "type": "از حزب مؤتلفه اسلامی",
+            "mobile": "09125006963",
+            "lastName": "خابوری",
+            "firstName": "غلامرضا",
+            "homeAddress": "تهران،17 شهریورجنوبی، خ منصور غربی، پ 914",
+            "workAddress": "بازنشسته وزارت صنایع",
+            "relationship": "دوست مسجدی"
+          }
+        ],
+        "consent": true,
+        "commitmentDate": "2023-03-06",
+        "feeAccepted": true,
+        "signatureStatus": "نسخه کاغذی امضا شده است"
+      }
+    }
+  ]
+}

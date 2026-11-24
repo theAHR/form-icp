@@ -1,0 +1,60 @@
+{
+  "name": "ICP-membership",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run db:generate && next build && node scripts/prepare-standalone.mjs",
+    "start": "node --env-file-if-exists=.env scripts/start.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:integration": "node --env-file-if-exists=.env --import tsx tests/integration.ts",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed": "node --env-file-if-exists=.env --import tsx prisma/seed.ts",
+    "forms:export": "node --env-file-if-exists=.env --import tsx scripts/forms-transfer.ts export",
+    "forms:import": "node --env-file-if-exists=.env --import tsx scripts/forms-transfer.ts import",
+    "backup:members": "node --env-file-if-exists=.env scripts/backup-members.mjs",
+    "test:e2e": "playwright test"
+  },
+  "prisma": {
+    "seed": "node --env-file-if-exists=.env --import tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "6.3.1",
+    "@dnd-kit/sortable": "10.0.0",
+    "@dnd-kit/utilities": "3.2.2",
+    "@fontsource/vazirmatn": "5.2.8",
+    "@hookform/resolvers": "5.2.2",
+    "@prisma/client": "6.19.2",
+    "@radix-ui/react-slot": "1.2.4",
+    "bcryptjs": "3.0.3",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.577.0",
+    "next": "16.3.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-hook-form": "7.71.1",
+    "react-multi-date-picker": "^4.5.2",
+    "sharp": "0.35.4",
+    "tailwind-merge": "3.4.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "prisma": "6.19.2",
+    "tailwindcss": "4.2.1",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "vitest": "4.0.18"
+  },
+  "overrides": {
+    "effect": "3.22.2",
+    "deepmerge-ts": "8.0.2"
+  }
+}

@@ -1,0 +1,64 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> ICP-membership@1.0.0 start
+> node --env-file-if-exists=.env scripts/start.mjs
+
+▲ Next.js 16.3.6
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+✓ Ready in 0ms
+✓ Running next.config took 4ms
+
+> ICP-membership@1.0.0 start
+> node --env-file-if-exists=.env scripts/start.mjs
+
+▲ Next.js 16.3.6
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+✓ Ready in 0ms
+✓ Running next.config took 4ms
+
+> ICP-membership@1.0.0 start
+> node --env-file-if-exists=.env scripts/start.mjs
+
+▲ Next.js 16.3.6
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+✓ Ready in 0ms
+✓ Running next.config took 4ms
+
+> ICP-membership@1.0.0 start
+> node --env-file-if-exists=.env scripts/start.mjs
+
+▲ Next.js 16.3.6
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+✓ Ready in 0ms
+✓ Running next.config took 4ms
+
+> ICP-membership@1.0.0 start
+> node --env-file-if-exists=.env scripts/start.mjs
+
+▲ Next.js 16.3.6
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+✓ Ready in 0ms
+✓ Running next.config took 4ms
+
+> ICP-membership@1.0.0 start
+> node --env-file-if-exists=.env scripts/start.mjs
+
+▲ Next.js 16.3.6
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+✓ Ready in 0ms
+✓ Running next.config took 4ms
+
+> ICP-membership@1.0.0 start
+> node --env-file-if-exists=.env scripts/start.mjs
+
+▲ Next.js 16.3.6
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+✓ Ready in 0ms
+✓ Running next.config took 4ms

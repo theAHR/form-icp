@@ -1,0 +1,898 @@
+{
+  "format": "icp-forms",
+  "version": 1,
+  "exportedAt": "2026-10-31T12:44:02.561Z",
+  "forms": [
+    {
+      "slug": "membership-application",
+      "title": "ثبت اطلاعات فردی اعضا",
+      "purpose": "APPLICATION",
+      "public": true,
+      "sensitive": false,
+      "status": "PUBLISHED",
+      "schema": {
+        "fields": [
+          {
+            "key": "notice",
+            "type": "description",
+            "label": "عضویت پرسنل نیروی «نظامی، انتظامی، اطلاعاتی» قانوناً ممنوع می‌باشد."
+          },
+          {
+            "key": "intro",
+            "type": "description",
+            "label": "لطفاً اطلاعات را با دقت تکمیل کنید. فیلدهای ستاره‌دار الزامی هستند."
+          },
+          {
+            "key": "secMembership",
+            "type": "section",
+            "label": "۱- وضعیت عضویت"
+          },
+          {
+            "key": "membershipNumber",
+            "type": "text",
+            "label": "شماره عضویت"
+          },
+          {
+            "key": "membershipDate",
+            "type": "date",
+            "label": "تاریخ عضویت"
+          },
+          {
+            "key": "membershipStatus",
+            "type": "radio",
+            "label": "وضعیت عضویت",
+            "options": [
+              "فعال",
+              "راکد"
+            ]
+          },
+          {
+            "key": "dormantReason",
+            "type": "radio",
+            "label": "دلیل رکود عضویت",
+            "options": [
+              "فوت",
+              "استعفا",
+              "لغو عضویت"
+            ],
+            "visibleWhen": {
+              "field": "membershipStatus",
+              "equals": "راکد"
+            }
+          },
+          {
+            "key": "dormantReasonDetail",
+            "type": "textarea",
+            "label": "شرح دلیل استعفا / لغو عضویت",
+            "visibleWhen": {
+              "field": "dormantReason",
+              "equals": [
+                "استعفا",
+                "لغو عضویت"
+              ]
+            }
+          },
+          {
+            "key": "secIdentity",
+            "type": "section",
+            "label": "۲- مشخصات هویتی"
+          },
+          {
+            "key": "profilePhotos",
+            "max": 5,
+            "min": 0,
+            "type": "image",
+            "label": "عکس پروفایل"
+          },
+          {
+            "key": "firstName",
+            "type": "text",
+            "label": "نام",
+            "required": true,
+            "personField": "firstName"
+          },
+          {
+            "key": "lastName",
+            "type": "text",
+            "label": "نام خانوادگی",
+            "required": true,
+            "personField": "lastName"
+          },
+          {
+            "key": "fatherName",
+            "type": "text",
+            "label": "نام پدر",
+            "personField": "fatherName"
+          },
+          {
+            "key": "gender",
+            "type": "radio",
+            "label": "جنسیت",
+            "options": [
+              "مرد",
+              "زن"
+            ]
+          },
+          {
+            "key": "nationalId",
+            "type": "nationalId",
+            "label": "کدملی",
+            "personField": "nationalId"
+          },
+          {
+            "key": "idBookNumber",
+            "type": "text",
+            "label": "شماره شناسنامه"
+          },
+          {
+            "key": "birthDate",
+            "type": "date",
+            "label": "تاریخ تولد",
+            "personField": "birthDate"
+          },
+          {
+            "key": "placeOfIssue",
+            "type": "text",
+            "label": "محل صدور"
+          },
+          {
+            "key": "religion",
+            "type": "text",
+            "label": "مذهب"
+          },
+          {
+            "key": "marjaName",
+            "type": "text",
+            "label": "نام مرجع تقلید"
+          },
+          {
+            "key": "secContact",
+            "type": "section",
+            "label": "۳- راه‌های ارتباطی"
+          },
+          {
+            "key": "mobile",
+            "type": "phone",
+            "label": "تلفن همراه",
+            "required": true,
+            "personField": "mobile"
+          },
+          {
+            "key": "phone",
+            "type": "phone",
+            "label": "تلفن ثابت"
+          },
+          {
+            "key": "virtualPhone",
+            "type": "text",
+            "label": "شماره تلفن در فضای مجازی"
+          },
+          {
+            "key": "email",
+            "type": "email",
+            "label": "ایمیل",
+            "personField": "email"
+          },
+          {
+            "key": "secLocation",
+            "type": "section",
+            "label": "۴- محل سکونت و حوزه"
+          },
+          {
+            "key": "province",
+            "type": "text",
+            "label": "نام استان"
+          },
+          {
+            "key": "city",
+            "type": "text",
+            "label": "نام شهرستان"
+          },
+          {
+            "key": "district",
+            "type": "text",
+            "label": "حوزه"
+          },
+          {
+            "key": "region",
+            "type": "text",
+            "label": "منطقه"
+          },
+          {
+            "key": "residences",
+            "max": 20,
+            "type": "repeater",
+            "label": "سوابق محل سکونت (از تاریخ تا تاریخ)",
+            "children": [
+              {
+                "key": "address",
+                "type": "textarea",
+                "label": "نشانی محل سکونت"
+              },
+              {
+                "key": "fromDate",
+                "type": "date",
+                "label": "از تاریخ"
+              },
+              {
+                "key": "toDate",
+                "type": "date",
+                "label": "تا تاریخ"
+              },
+              {
+                "key": "postalCode",
+                "type": "text",
+                "label": "کدپستی",
+                "pattern": "postalCode"
+              },
+              {
+                "key": "landline",
+                "type": "phone",
+                "label": "تلفن ثابت"
+              }
+            ]
+          },
+          {
+            "key": "secFamily",
+            "type": "section",
+            "label": "۵- وضعیت تأهل و همسر"
+          },
+          {
+            "key": "maritalStatus",
+            "type": "radio",
+            "label": "وضعیت تأهل",
+            "options": [
+              "متأهل",
+              "مجرد"
+            ]
+          },
+          {
+            "key": "daughtersCount",
+            "max": 30,
+            "min": 0,
+            "type": "number",
+            "label": "تعداد فرزند دختر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "sonsCount",
+            "max": 30,
+            "min": 0,
+            "type": "number",
+            "label": "تعداد فرزند پسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseFirstName",
+            "type": "text",
+            "label": "نام همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseLastName",
+            "type": "text",
+            "label": "نام خانوادگی همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseFatherName",
+            "type": "text",
+            "label": "نام پدر همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseMobile",
+            "type": "phone",
+            "label": "تلفن همراه همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseEducation",
+            "type": "text",
+            "label": "تحصیلات همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseJob",
+            "type": "text",
+            "label": "شغل همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseWorkAddress",
+            "type": "textarea",
+            "label": "نشانی محل کار همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseWorkPhone",
+            "type": "phone",
+            "label": "تلفن محل کار همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseHomeAddress",
+            "type": "textarea",
+            "label": "نشانی منزل همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "spouseHomePhone",
+            "type": "phone",
+            "label": "تلفن منزل همسر",
+            "visibleWhen": {
+              "field": "maritalStatus",
+              "equals": "متأهل"
+            }
+          },
+          {
+            "key": "secEducation",
+            "type": "section",
+            "label": "۶- سوابق تحصیلی"
+          },
+          {
+            "key": "educationHistory",
+            "max": 15,
+            "type": "repeater",
+            "label": "مدارج تحصیلی",
+            "children": [
+              {
+                "key": "degree",
+                "type": "select",
+                "label": "مقطع تحصیلی",
+                "options": [
+                  "زیر دیپلم",
+                  "دیپلم",
+                  "کاردانی",
+                  "کارشناسی",
+                  "کارشناسی ارشد",
+                  "دکترا",
+                  "حوزوی",
+                  "سایر"
+                ]
+              },
+              {
+                "key": "institution",
+                "type": "text",
+                "label": "نام مؤسسه / دانشگاه"
+              },
+              {
+                "key": "startDate",
+                "type": "date",
+                "label": "تاریخ شروع"
+              },
+              {
+                "key": "endDate",
+                "type": "date",
+                "label": "تاریخ پایان"
+              }
+            ]
+          },
+          {
+            "key": "secJobs",
+            "type": "section",
+            "label": "۷- سوابق شغلی"
+          },
+          {
+            "key": "jobs",
+            "max": 20,
+            "type": "repeater",
+            "label": "سوابق اشتغال",
+            "children": [
+              {
+                "key": "sector",
+                "type": "select",
+                "label": "نوع اشتغال",
+                "options": [
+                  "آزاد",
+                  "دولتی",
+                  "خصوصی"
+                ]
+              },
+              {
+                "key": "jobType",
+                "type": "searchSelect",
+                "label": "نوع شغل",
+                "placeholder": "جستجوی نوع شغل…",
+                "optionsSource": "jobTypes"
+              },
+              {
+                "key": "employmentState",
+                "type": "radio",
+                "label": "وضعیت",
+                "options": [
+                  "در حال اشتغال",
+                  "پایان یافته"
+                ]
+              },
+              {
+                "key": "startDate",
+                "type": "date",
+                "label": "تاریخ شروع"
+              },
+              {
+                "key": "endDate",
+                "type": "date",
+                "label": "تاریخ پایان",
+                "visibleWhen": {
+                  "field": "employmentState",
+                  "equals": "پایان یافته"
+                }
+              },
+              {
+                "key": "workAddress",
+                "type": "textarea",
+                "label": "نشانی محل کار"
+              },
+              {
+                "key": "workPhone",
+                "type": "phone",
+                "label": "تلفن محل کار"
+              }
+            ]
+          },
+          {
+            "key": "secSkills",
+            "type": "section",
+            "label": "۸- تخصص و مهارت"
+          },
+          {
+            "key": "skills",
+            "type": "textarea",
+            "label": "تخصص و مهارت‌ها"
+          },
+          {
+            "key": "secBelief",
+            "type": "section",
+            "label": "۹- باورها و التزام"
+          },
+          {
+            "key": "velayat",
+            "type": "textarea",
+            "label": "میزان التزام عملی خود به ولایت فقیه را بیان نمائید"
+          },
+          {
+            "key": "secPolitics",
+            "type": "section",
+            "label": "۱۰- احزاب، گروه‌ها و فعالیت حزبی"
+          },
+          {
+            "key": "partiesGroups",
+            "max": 20,
+            "type": "repeater",
+            "label": "احزاب و گروه‌ها",
+            "children": [
+              {
+                "key": "name",
+                "type": "text",
+                "label": "نام حزب / گروه / سازمان"
+              },
+              {
+                "key": "fromDate",
+                "type": "date",
+                "label": "از تاریخ"
+              },
+              {
+                "key": "toDate",
+                "type": "date",
+                "label": "تا تاریخ"
+              },
+              {
+                "key": "role",
+                "type": "text",
+                "label": "سمت یا نوع فعالیت"
+              },
+              {
+                "key": "notes",
+                "type": "textarea",
+                "label": "ملاحظات"
+              }
+            ]
+          },
+          {
+            "key": "partyActivities",
+            "max": 30,
+            "type": "repeater",
+            "label": "فعالیت داخل حزب",
+            "children": [
+              {
+                "key": "fromDate",
+                "type": "date",
+                "label": "از تاریخ"
+              },
+              {
+                "key": "toDate",
+                "type": "date",
+                "label": "تا تاریخ"
+              },
+              {
+                "key": "position",
+                "type": "text",
+                "label": "حکم / سمت در آن تاریخ"
+              },
+              {
+                "key": "notes",
+                "type": "textarea",
+                "label": "ملاحظات"
+              }
+            ]
+          },
+          {
+            "key": "familyPolitics",
+            "type": "textarea",
+            "label": "در صورتی که از خانواده یا دوستان با گروه‌های سیاسی مرتبط بوده یا دستگیر شده‌اند، بیان فرمایید"
+          },
+          {
+            "key": "familyBackground",
+            "type": "textarea",
+            "label": "سوابق فعالیت‌های عقیدتی، سیاسی و اجتماعی خانواده"
+          },
+          {
+            "key": "secTraining",
+            "type": "section",
+            "label": "۱۱- دوره‌های آموزشی"
+          },
+          {
+            "key": "trainings",
+            "max": 30,
+            "type": "repeater",
+            "label": "دوره‌های آموزشی",
+            "children": [
+              {
+                "key": "trainingType",
+                "type": "text",
+                "label": "نوع آموزش"
+              },
+              {
+                "key": "date",
+                "type": "date",
+                "label": "تاریخ"
+              },
+              {
+                "key": "notes",
+                "type": "text",
+                "label": "توضیحات"
+              }
+            ]
+          },
+          {
+            "key": "secSacrifice",
+            "type": "section",
+            "label": "۱۲- وضعیت ایثارگری"
+          },
+          {
+            "key": "sacrificeNote",
+            "type": "description",
+            "label": "می‌توانید برای جانباز و آزاده اطلاعات خود یا بستگان درجه یک را وارد کنید. برای شهید، اطلاعات شخص شهید (نسبت درجه یک) را ثبت کنید. نسبت مجاز: خودم، همسر، پدر، مادر، فرزند، برادر، خواهر."
+          },
+          {
+            "key": "sacrificeRecords",
+            "max": 20,
+            "type": "repeater",
+            "label": "سوابق ایثارگری",
+            "children": [
+              {
+                "key": "kind",
+                "type": "select",
+                "label": "نوع",
+                "options": [
+                  "جانباز",
+                  "شهید",
+                  "آزاده"
+                ]
+              },
+              {
+                "key": "relation",
+                "type": "select",
+                "label": "نسبت",
+                "options": [
+                  "خودم",
+                  "همسر",
+                  "پدر",
+                  "مادر",
+                  "فرزند",
+                  "برادر",
+                  "خواهر"
+                ]
+              },
+              {
+                "key": "fullName",
+                "type": "text",
+                "label": "نام و نام خانوادگی"
+              },
+              {
+                "key": "nationalId",
+                "type": "text",
+                "label": "کدملی (در صورت وجود)"
+              },
+              {
+                "key": "description",
+                "type": "textarea",
+                "label": "توضیحات"
+              }
+            ]
+          },
+          {
+            "key": "secMotivation",
+            "type": "section",
+            "label": "۱۳- هدف عضویت و همکاری"
+          },
+          {
+            "key": "familiarity",
+            "type": "textarea",
+            "label": "از چه زمانی و چگونه با حزب مؤتلفه اسلامی آشنایی یافتید؟"
+          },
+          {
+            "key": "goal",
+            "type": "textarea",
+            "label": "هدف از عضویت"
+          },
+          {
+            "key": "interests",
+            "max": 2,
+            "type": "checkboxGroup",
+            "label": "تمایل به فعالیت در کدام بخش‌ها بیشتر است؟ (حداکثر ۲ مورد)",
+            "options": [
+              "سیاسی",
+              "آموزش",
+              "پژوهش",
+              "تبلیغات",
+              "جوانان",
+              "بانوان",
+              "فضای مجازی"
+            ]
+          },
+          {
+            "key": "interestReason",
+            "type": "textarea",
+            "label": "علت انتخاب بخش‌ها"
+          },
+          {
+            "key": "weeklyHours",
+            "max": 168,
+            "min": 0,
+            "type": "number",
+            "label": "میزان وقت‌گذاری هفتگی در دفتر حزب (ساعت)"
+          },
+          {
+            "key": "cyberspace",
+            "type": "textarea",
+            "label": "نحوه بهره‌گیری از فضای مجازی"
+          },
+          {
+            "key": "messengers",
+            "type": "textarea",
+            "label": "سکوهای پیام‌رسان مورد استفاده"
+          },
+          {
+            "key": "lifeStory",
+            "type": "textarea",
+            "label": "شرح مختصری از زندگی و حوادث مهم"
+          },
+          {
+            "key": "orgNeeds",
+            "type": "textarea",
+            "label": "به نظر شما یک تشکل اسلامی در شرایط کنونی چه ضرورت‌هایی باید داشته باشد؟"
+          },
+          {
+            "key": "extra",
+            "type": "textarea",
+            "label": "سایر نکات مؤثر در شناخت شما"
+          },
+          {
+            "key": "secAdmin",
+            "type": "section",
+            "label": "۱۴- اطلاعات تکمیلی و معرف"
+          },
+          {
+            "key": "completedDate",
+            "type": "date",
+            "label": "تاریخ تکمیل فرم"
+          },
+          {
+            "key": "computerCode",
+            "type": "text",
+            "label": "کد رایانه"
+          },
+          {
+            "key": "referrers",
+            "max": 2,
+            "type": "repeater",
+            "label": "نام و مشخصات معرف",
+            "children": [
+              {
+                "key": "type",
+                "type": "select",
+                "label": "نوع معرف",
+                "options": [
+                  "از حزب مؤتلفه اسلامی",
+                  "فردی که شما را می‌شناسد"
+                ]
+              },
+              {
+                "key": "firstName",
+                "type": "text",
+                "label": "نام"
+              },
+              {
+                "key": "lastName",
+                "type": "text",
+                "label": "نام خانوادگی"
+              },
+              {
+                "key": "relationship",
+                "type": "text",
+                "label": "نسبت"
+              },
+              {
+                "key": "duration",
+                "type": "text",
+                "label": "مدت زمان آشنایی"
+              },
+              {
+                "key": "mobile",
+                "type": "phone",
+                "label": "تلفن همراه"
+              },
+              {
+                "key": "workAddress",
+                "type": "textarea",
+                "label": "نشانی محل کار"
+              },
+              {
+                "key": "workPhone",
+                "type": "phone",
+                "label": "تلفن محل کار"
+              },
+              {
+                "key": "homeAddress",
+                "type": "textarea",
+                "label": "نشانی منزل"
+              },
+              {
+                "key": "homePhone",
+                "type": "phone",
+                "label": "تلفن منزل"
+              }
+            ]
+          },
+          {
+            "key": "secCommit",
+            "type": "section",
+            "label": "۱۵- تعهدات و تأیید"
+          },
+          {
+            "key": "consentText",
+            "type": "description",
+            "label": "اطلاعات این فرم برای رسیدگی به درخواست عضویت در حزب مؤتلفه اسلامی استفاده می‌شود."
+          },
+          {
+            "key": "consent",
+            "type": "checkbox",
+            "label": "با ثبت و بررسی اطلاعات لازم برای درخواست عضویت موافقم",
+            "required": true
+          },
+          {
+            "key": "feeCommitment",
+            "type": "description",
+            "label": "ضمناً متعهد می‌شوم نسبت به پرداخت حق عضویت خود به میزان تعیین‌شده از سوی حزب اقدام نمایم."
+          },
+          {
+            "key": "commitmentDate",
+            "type": "date",
+            "label": "تاریخ تعهد",
+            "required": true
+          },
+          {
+            "key": "feeAccepted",
+            "type": "checkbox",
+            "label": "تعهد پرداخت حق عضویت و صحت اطلاعات را می‌پذیرم",
+            "required": true
+          },
+          {
+            "key": "signatureStatus",
+            "type": "select",
+            "label": "وضعیت امضای نسخه کاغذی",
+            "options": [
+              "هنوز امضا نشده",
+              "نسخه کاغذی امضا شده است"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "cardTemplates": [
+    {
+      "name": "قالب استاندارد حزب",
+      "definition": {
+        "color": "#00844B",
+        "elements": [
+          {
+            "x": 7,
+            "y": 6,
+            "text": "کارت عضویت حزب مؤتلفه اسلامی",
+            "type": "text",
+            "width": 85,
+            "height": 15,
+            "fontSize": 14
+          },
+          {
+            "x": 7,
+            "y": 27,
+            "type": "firstName",
+            "width": 50,
+            "height": 13,
+            "fontSize": 16
+          },
+          {
+            "x": 7,
+            "y": 42,
+            "type": "lastName",
+            "width": 50,
+            "height": 13,
+            "fontSize": 16
+          },
+          {
+            "x": 7,
+            "y": 61,
+            "type": "membershipNumber",
+            "width": 50,
+            "height": 12,
+            "fontSize": 11
+          },
+          {
+            "x": 7,
+            "y": 78,
+            "type": "expirationDate",
+            "width": 50,
+            "height": 11,
+            "fontSize": 10
+          },
+          {
+            "x": 67,
+            "y": 36,
+            "type": "qr",
+            "width": 27,
+            "height": 44,
+            "fontSize": 10
+          }
+        ],
+        "background": "#ffffff"
+      }
+    }
+  ]
+}

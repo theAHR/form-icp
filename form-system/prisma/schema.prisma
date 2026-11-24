@@ -1,0 +1,283 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum FormStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum RequestStatus {
+  NEW
+  UNDER_REVIEW
+  NEEDS_CORRECTION
+  APPROVED
+  REJECTED
+  CANCELLED
+}
+
+enum MemberStatus {
+  ACTIVE
+  EXPIRED
+  SUSPENDED
+  CANCELLED
+}
+
+model User {
+  id                 String              @id @default(cuid())
+  username           String              @unique
+  displayName        String
+  passwordHash       String
+  disabled           Boolean             @default(false)
+  mustChangePassword Boolean             @default(true)
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  roles              UserRole[]
+  sessions           Session[]
+  assignedRequests   MembershipRequest[]
+}
+
+model Role {
+  id          String           @id
+  name        String           @unique
+  users       UserRole[]
+  permissions RolePermission[]
+}
+
+model Permission {
+  id    String           @id
+  roles RolePermission[]
+}
+
+model UserRole {
+  userId String
+  roleId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role   Role   @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@id([userId, roleId])
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@id([roleId, permissionId])
+}
+
+model Session {
+  id        String   @id
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model RateLimit {
+  key     String   @id
+  count   Int
+  resetAt DateTime
+}
+
+model Form {
+  id               String        @id @default(cuid())
+  slug             String        @unique
+  title            String
+  purpose          String        @default("GENERAL")
+  status           FormStatus    @default(DRAFT)
+  public           Boolean       @default(false)
+  sensitive        Boolean       @default(false)
+  currentVersionId String?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  versions         FormVersion[] @relation("FormVersions")
+  currentVersion   FormVersion?  @relation("CurrentVersion", fields: [currentVersionId], references: [id])
+}
+
+model FormVersion {
+  id          String           @id @default(cuid())
+  formId      String
+  number      Int
+  slug        String
+  public      Boolean          @default(false)
+  title       String
+  purpose     String           @default("GENERAL")
+  sensitive   Boolean          @default(false)
+  schema      Json
+  publishedAt DateTime?
+  createdAt   DateTime         @default(now())
+  form        Form             @relation("FormVersions", fields: [formId], references: [id])
+  currentFor  Form[]           @relation("CurrentVersion")
+  fields      FormField[]
+  submissions FormSubmission[]
+
+  @@unique([formId, number])
+}
+
+model FormField {
+  id         String      @id @default(cuid())
+  versionId  String
+  key        String
+  position   Int
+  definition Json
+  version    FormVersion @relation(fields: [versionId], references: [id], onDelete: Cascade)
+
+  @@unique([versionId, key])
+}
+
+model Person {
+  id          String              @id @default(cuid())
+  firstName   String
+  lastName    String
+  fatherName  String?
+  nationalId  String?             @unique
+  birthDate   String?
+  mobile      String?
+  email       String?
+  photoId     String?
+  photo       File?               @relation(fields: [photoId], references: [id])
+  status      String              @default("APPLICANT")
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  requests    MembershipRequest[]
+  submissions FormSubmission[]
+  member      Member?
+
+  @@index([lastName, firstName])
+  @@index([mobile])
+}
+
+model FormSubmission {
+  id           String                        @id @default(cuid())
+  versionId    String
+  personId     String
+  data         Json
+  createdBy    String?
+  createdAt    DateTime                      @default(now())
+  supersedesId String?                       @unique
+  version      FormVersion                   @relation(fields: [versionId], references: [id])
+  person       Person                        @relation(fields: [personId], references: [id])
+  values       FormSubmissionValue[]
+  requests     MembershipRequestSubmission[]
+  files        File[]
+  primaryFor   MembershipRequest?            @relation("PrimarySubmission")
+}
+
+model FormSubmissionValue {
+  id           String         @id @default(cuid())
+  submissionId String
+  fieldKey     String
+  value        Json
+  submission   FormSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+
+  @@unique([submissionId, fieldKey])
+}
+
+model MembershipRequest {
+  id                  String                        @id @default(cuid())
+  sequence            Int                           @unique @default(autoincrement())
+  requestNumber       String                        @unique
+  personId            String
+  primarySubmissionId String                        @unique
+  primarySubmission   FormSubmission                @relation("PrimarySubmission", fields: [primarySubmissionId], references: [id])
+  status              RequestStatus                 @default(NEW)
+  assignedTo          String?
+  assignee            User?                         @relation(fields: [assignedTo], references: [id])
+  interviewCompleted  Boolean                       @default(false)
+  reviewedAt          DateTime?
+  rejectionReason     String?
+  internalNote        String?
+  createdAt           DateTime                      @default(now())
+  updatedAt           DateTime                      @updatedAt
+  person              Person                        @relation(fields: [personId], references: [id])
+  submissions         MembershipRequestSubmission[]
+  history             MembershipRequestHistory[]
+  member              Member?
+
+  @@index([status, createdAt])
+  @@index([assignedTo])
+}
+
+model MembershipRequestSubmission {
+  requestId    String
+  submissionId String
+  request      MembershipRequest @relation(fields: [requestId], references: [id])
+  submission   FormSubmission    @relation(fields: [submissionId], references: [id])
+
+  @@id([requestId, submissionId])
+}
+
+model MembershipRequestHistory {
+  id         String            @id @default(cuid())
+  requestId  String
+  fromStatus String?
+  toStatus   String
+  actorId    String?
+  note       String?
+  createdAt  DateTime          @default(now())
+  request    MembershipRequest @relation(fields: [requestId], references: [id])
+
+  @@index([requestId, createdAt])
+}
+
+model Member {
+  id               String            @id @default(cuid())
+  membershipNumber String            @unique
+  personId         String            @unique
+  requestId        String            @unique
+  membershipType   String            @default("عادی")
+  startDate        DateTime          @default(now())
+  expirationDate   DateTime
+  status           MemberStatus      @default(ACTIVE)
+  person           Person            @relation(fields: [personId], references: [id])
+  request          MembershipRequest @relation(fields: [requestId], references: [id])
+
+  @@index([status, expirationDate])
+}
+
+model File {
+  id           String          @id @default(cuid())
+  storageKey   String          @unique
+  originalName String
+  mime         String
+  size         Int
+  ownerId      String?
+  guestHash    String?
+  personPhotos Person[]
+  submissionId String?
+  submission   FormSubmission? @relation(fields: [submissionId], references: [id])
+  createdAt    DateTime        @default(now())
+
+  @@index([submissionId])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  action    String
+  entity    String
+  entityId  String?
+  ip        String?
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([entity, entityId])
+}
+
+model SystemSetting {
+  key       String   @id
+  value     Json
+  updatedAt DateTime @updatedAt
+}
