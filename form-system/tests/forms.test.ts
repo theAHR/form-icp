@@ -6,6 +6,9 @@ import {
   normalizeDigits,
   type FormSchema,
 } from "../lib/forms/engine";
+import { changedFieldLabels } from "../lib/forms/engine";
+import { memberPersonalInfo } from "../lib/forms/schemas/member-personal-info";
+import { patchMemberFormSchema } from "../lib/forms/schemas/member-form-patch";
 import { assertTransition } from "../lib/workflow";
 import { hasPermission, rolePermissions } from "../lib/permissions";
 import { csv } from "../lib/queries";
@@ -194,5 +197,65 @@ describe("workflow and authorization", () => {
 describe("export safety", () => {
   it("escapes spreadsheet formula injection", () => {
     expect(csv([["=CMD()", "+1", "@evil", "normal"]])).toContain('"\'=CMD()"');
+  });
+});
+describe("member form updates", () => {
+  it("member schema is valid and has new education/sacrifice options", () => {
+    const s = schemaValidator.parse(memberPersonalInfo);
+    const edu = s.fields.find((f) => f.key === "educationHistory");
+    expect(edu?.children?.map((c) => c.key)).toEqual(
+      expect.arrayContaining(["major", "specialization"]),
+    );
+    const kind = s.fields
+      .find((f) => f.key === "sacrificeRecords")
+      ?.children?.find((c) => c.key === "kind");
+    expect(kind?.options).toEqual(
+      expect.arrayContaining(["سابقه بسیج", "سابقه جبهه"]),
+    );
+  });
+  it("patch adds fields to an older schema once and is idempotent", () => {
+    const old: FormSchema = {
+      fields: [
+        {
+          key: "educationHistory",
+          type: "repeater",
+          label: "مدارج تحصیلی",
+          children: [
+            { key: "degree", type: "select", label: "مقطع", options: ["دیپلم"] },
+            { key: "institution", type: "text", label: "مؤسسه" },
+          ],
+        },
+        {
+          key: "sacrificeRecords",
+          type: "repeater",
+          label: "سوابق ایثارگری",
+          children: [
+            {
+              key: "kind",
+              type: "select",
+              label: "نوع",
+              options: ["جانباز", "شهید", "آزاده"],
+            },
+          ],
+        },
+      ],
+    };
+    const first = patchMemberFormSchema(old);
+    expect(first.changes.length).toBe(4);
+    expect(first.schema.fields[0].children?.map((c) => c.key)).toEqual([
+      "degree",
+      "major",
+      "specialization",
+      "institution",
+    ]);
+    expect(schemaValidator.safeParse(first.schema).success).toBe(true);
+    expect(patchMemberFormSchema(first.schema).changes).toEqual([]);
+    expect(old.fields[0].children?.length).toBe(2);
+  });
+  it("lists changed field labels between two answers", () => {
+    const s = schemaValidator.parse(memberPersonalInfo);
+    const before = { firstName: "علی", nationalId: "0012345678", skills: "" };
+    const after = { firstName: "علی", nationalId: "0084575948", city: "قم" };
+    expect(changedFieldLabels(s, before, after)).toEqual(["کدملی", "نام شهرستان"]);
   });
 });

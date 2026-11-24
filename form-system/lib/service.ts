@@ -14,6 +14,7 @@ import {
   schemaValidator,
   validateAnswers,
   fileIds,
+  changedFieldLabels,
   type FormSchema,
 } from "./forms/engine";
 import { assertTransition } from "./workflow";
@@ -223,6 +224,7 @@ export async function submit(
         "درخواست بسته شده است.",
       );
     }
+    let previousData: Record<string, unknown> | null = null;
     if (p.supersedesId) {
       check(request, 400, "اصلاح پاسخ باید به پرونده مرتبط باشد.");
       const old = await tx.membershipRequestSubmission.findUnique({
@@ -239,7 +241,29 @@ export async function submit(
         400,
         "پاسخ قبلی متعلق به این فرم نیست.",
       );
+      const alreadyEdited = await tx.formSubmission.findUnique({
+        where: { supersedesId: p.supersedesId },
+        select: { id: true },
+      });
+      check(
+        !alreadyEdited,
+        409,
+        "این پرونده در این فاصله توسط کاربر دیگری ویرایش شده است؛ صفحه را بازخوانی و دوباره ویرایش کنید.",
+      );
+      previousData = (old.submission.data as Record<string, unknown>) ?? {};
     }
+    // فایل‌هایی که پیش‌تر به هر یک از پاسخ‌های همین پرونده پیوست شده‌اند،
+    // در ویرایش دوباره قابل استفاده‌اند.
+    const caseSubmissionIds = new Set(
+      request
+        ? (
+            await tx.membershipRequestSubmission.findMany({
+              where: { requestId: request.id },
+              select: { submissionId: true },
+            })
+          ).map((s) => s.submissionId)
+        : [],
+    );
     let person =
       member?.person ??
       (request
@@ -250,10 +274,13 @@ export async function submit(
         : null);
     if (p.personId)
       check(person && person.id === p.personId, 404, "فرد یافت نشد.");
+    // فیلدهای نگاشت‌شده به مشخصات فرد؛ مقدار خالی یعنی کاربر آن را پاک کرده است.
     const mapped: Record<string, string> = {};
     for (const f of schema.fields)
-      if (f.personField && typeof data[f.key] === "string")
-        mapped[f.personField] = data[f.key] as string;
+      if (f.personField)
+        mapped[f.personField] =
+          typeof data[f.key] === "string" ? (data[f.key] as string) : "";
+    const editingCase = !!(member || request);
     if (!person) {
       check(
         v.purpose === "APPLICATION" && mapped.firstName && mapped.lastName,
@@ -279,19 +306,34 @@ export async function submit(
             data: {
               firstName: mapped.firstName,
               lastName: mapped.lastName,
-              fatherName: mapped.fatherName,
-              nationalId: mapped.nationalId,
-              birthDate: mapped.birthDate,
-              mobile: mapped.mobile,
-              email: mapped.email,
+              fatherName: mapped.fatherName || null,
+              nationalId: mapped.nationalId || null,
+              birthDate: mapped.birthDate || null,
+              mobile: mapped.mobile || null,
+              email: mapped.email || null,
             },
           });
-    } else if (v.purpose === "APPLICATION") {
-      check(
-        !mapped.nationalId || mapped.nationalId === person.nationalId,
-        400,
-        "کد ملی با فرد انتخاب‌شده یکسان نیست.",
-      );
+    } else if (v.purpose === "APPLICATION" && mapped.nationalId) {
+      if (editingCase) {
+        // ویرایش پرونده موجود: کد ملی قابل اصلاح است، به شرط این‌که
+        // متعلق به فرد دیگری در سامانه نباشد.
+        if (mapped.nationalId !== person.nationalId) {
+          const owner = await tx.person.findUnique({
+            where: { nationalId: mapped.nationalId },
+            select: { id: true },
+          });
+          check(
+            !owner || owner.id === person.id,
+            409,
+            "این کد ملی متعلق به فرد دیگری در سامانه است.",
+          );
+        }
+      } else
+        check(
+          mapped.nationalId === person.nationalId,
+          400,
+          "کد ملی با فرد انتخاب‌شده یکسان نیست.",
+        );
     }
     if (v.purpose === "APPLICATION" && Object.keys(mapped).length) {
       person = await tx.person.update({
@@ -299,6 +341,10 @@ export async function submit(
         data: {
           ...(mapped.firstName ? { firstName: mapped.firstName } : {}),
           ...(mapped.lastName ? { lastName: mapped.lastName } : {}),
+          ...(mapped.nationalId !== undefined &&
+          (editingCase || !person.nationalId)
+            ? { nationalId: mapped.nationalId || null }
+            : {}),
           ...(mapped.fatherName !== undefined
             ? { fatherName: mapped.fatherName || null }
             : {}),
@@ -323,7 +369,7 @@ export async function submit(
       files.length === ids.length &&
         files.every((f) => {
           const alreadyOnCase =
-            !!p.supersedesId && f.submissionId === p.supersedesId;
+            !!f.submissionId && caseSubmissionIds.has(f.submissionId);
           if (alreadyOnCase) return true;
           if (f.submissionId) return false;
           return user
@@ -355,7 +401,11 @@ export async function submit(
         data: { submissionId: submission.id },
       });
     const photoId = firstPhotoId(data);
-    if (photoId) {
+    // در ویرایش، اگر عکس فرم تغییری نکرده باشد عکسی که جداگانه از
+    // «به‌روزرسانی عکس» ثبت شده بازنویسی نمی‌شود.
+    const photoChanged =
+      !previousData || photoId !== firstPhotoId(previousData);
+    if (photoId && photoChanged) {
       const photo = files.find((f) => f.id === photoId);
       if (photo)
         await tx.person.update({
@@ -428,14 +478,20 @@ export async function submit(
       });
       await audit(tx, user?.id ?? null, "ایجاد عضو", "Member", created.id, ip);
     } else {
-      await tx.membershipRequest.update({
-        where: { id: request.id },
-        data: {
-          primarySubmissionId: submission.id,
-          ...(note ? { internalNote: note } : {}),
-        },
-      });
-      if (member || request.status === "APPROVED") {
+      // فقط فرم اصلی (ثبت اطلاعات) جایگزین پاسخ اصلی پرونده می‌شود؛
+      // فرم‌های تکمیلی/مصاحبه نباید فرم ویرایش عضو را عوض کنند.
+      if (v.purpose === "APPLICATION")
+        await tx.membershipRequest.update({
+          where: { id: request.id },
+          data: {
+            primarySubmissionId: submission.id,
+            ...(note ? { internalNote: note } : {}),
+          },
+        });
+      if (
+        v.purpose === "APPLICATION" &&
+        (member || request.status === "APPROVED")
+      ) {
         const status = memberStatusFromAnswers(data);
         const membershipNumber = membershipNumberFromAnswers(data);
         if (membershipNumber) {
@@ -447,6 +503,10 @@ export async function submit(
           });
           check(!clash, 409, "این شماره عضویت قبلاً ثبت شده است.");
         }
+        const current = await tx.member.findUnique({
+          where: { requestId: request.id },
+          select: { status: true },
+        });
         await tx.member.updateMany({
           where: { requestId: request.id },
           data: {
@@ -454,6 +514,16 @@ export async function submit(
             ...(membershipNumber ? { membershipNumber } : {}),
           },
         });
+        if (current && current.status !== status)
+          await tx.membershipRequestHistory.create({
+            data: {
+              requestId: request.id,
+              fromStatus: current.status,
+              toStatus: status,
+              actorId: user?.id,
+              note: `تغییر وضعیت به ${status === MemberStatus.SUSPENDED ? "راکد" : "فعال"} از طریق ویرایش اطلاعات`,
+            },
+          });
       }
     }
     check(request, 500, "ثبت پرونده ناموفق بود.");
@@ -472,7 +542,13 @@ export async function submit(
       "FormSubmission",
       submission.id,
       ip,
-      { version: v.number },
+      {
+        version: v.number,
+        requestId: request.id,
+        ...(previousData
+          ? { changed: changedFieldLabels(schema, previousData, data).slice(0, 60) }
+          : {}),
+      },
     );
     return {
       requestNumber: request.requestNumber,
@@ -683,6 +759,10 @@ export async function updateMember(input: unknown, user: Actor, ip: string) {
     }
     await audit(tx, user.id, "به‌روزرسانی عضو", "Member", m.id, ip, {
       status: nextStatus,
+      ...(p.status && p.status !== m.status ? { statusChanged: true } : {}),
+      ...(p.photoId ? { photo: true } : {}),
+      ...(p.expirationDate ? { expirationDate: p.expirationDate } : {}),
+      ...(p.membershipType ? { membershipType: p.membershipType } : {}),
     });
     return { ok: true };
   });

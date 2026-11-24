@@ -150,6 +150,8 @@ export const memberPersonalInfo: FormSchema = {
       max: 15,
       children: [
         f("degree", "مقطع تحصیلی", "select", { options: DEGREE_OPTIONS }),
+        f("major", "رشته تحصیلی"),
+        f("specialization", "گرایش تحصیلی"),
         f("institution", "نام مؤسسه / دانشگاه"),
         f("startDate", "تاریخ شروع", "date"),
         f("endDate", "تاریخ پایان", "date"),
@@ -243,14 +245,14 @@ export const memberPersonalInfo: FormSchema = {
     f("secSacrifice", "۱۲- وضعیت ایثارگری", "section"),
     f(
       "sacrificeNote",
-      "می‌توانید برای جانباز و آزاده اطلاعات خود یا بستگان درجه یک را وارد کنید. برای شهید، اطلاعات شخص شهید (نسبت درجه یک) را ثبت کنید. نسبت مجاز: خودم، همسر، پدر، مادر، فرزند، برادر، خواهر.",
+      "می‌توانید برای جانباز، آزاده، سابقه بسیج و سابقه جبهه اطلاعات خود یا بستگان درجه یک را وارد کنید. برای شهید، اطلاعات شخص شهید (نسبت درجه یک) را ثبت کنید. نسبت مجاز: خودم، همسر، پدر، مادر، فرزند، برادر، خواهر.",
       "description",
     ),
     f("sacrificeRecords", "سوابق ایثارگری", "repeater", {
       max: 20,
       children: [
         f("kind", "نوع", "select", {
-          options: ["جانباز", "شهید", "آزاده"],
+          options: ["جانباز", "شهید", "آزاده", "سابقه بسیج", "سابقه جبهه"],
         }),
         f("relation", "نسبت", "select", { options: RELATIONS }),
         f("fullName", "نام و نام خانوادگی"),

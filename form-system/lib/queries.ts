@@ -3,6 +3,7 @@ import { db } from "./db";
 import { type Actor, requirePermission } from "./auth";
 import { audit } from "./audit";
 import { check, AppError } from "./errors";
+import { changedFieldLabels, type FormSchema } from "./forms/engine";
 const insensitive = { mode: "insensitive" as Prisma.QueryMode };
 export function paging(url: URL) {
   const iso = (key: string) => {
@@ -400,6 +401,12 @@ export async function listing(
           request: {
             select: {
               internalNote: true,
+              // اولین پاسخ ثبت‌شده پرونده = ثبت‌کننده اصلی (با ویرایش عوض نمی‌شود)
+              submissions: {
+                orderBy: { submission: { createdAt: "asc" } },
+                take: 1,
+                select: { submission: { select: { createdBy: true } } },
+              },
               primarySubmission: {
                 select: {
                   createdBy: true,
@@ -420,11 +427,12 @@ export async function listing(
       }),
       db.member.count({ where }),
     ]);
+    const originalCreator = (m: (typeof rawItems)[number]) =>
+      m.request.submissions[0]?.submission.createdBy ??
+      m.request.primarySubmission.createdBy;
     const registrarIds = [
       ...new Set(
-        rawItems
-          .map((m) => m.request.primarySubmission.createdBy)
-          .filter((x): x is string => !!x),
+        rawItems.map(originalCreator).filter((x): x is string => !!x),
       ),
     ];
     const registrars = registrarIds.length
@@ -443,7 +451,7 @@ export async function listing(
         typeof notesRaw === "string"
           ? notesRaw
           : m.request.internalNote || "";
-      const createdBy = m.request.primarySubmission.createdBy;
+      const createdBy = originalCreator(m);
       const registrar = createdBy ? byRegistrar[createdBy] : null;
       return {
         id: m.id,
@@ -516,6 +524,179 @@ export async function listing(
   }
   throw new AppError(404, "مسیر یافت نشد.");
 }
+export interface TimelineEvent {
+  id: string;
+  at: Date;
+  actorName: string | null;
+  kind: "create" | "edit" | "form" | "status" | "member" | "note" | "view";
+  title: string;
+  fromStatus?: string | null;
+  toStatus?: string;
+  note?: string | null;
+  changes?: string[];
+}
+const VIEW_ACTIONS = new Set([
+  "مشاهده پرونده عضو",
+  "مشاهده درخواست عضویت",
+  "مشاهده پاسخ محرمانه",
+  "View Request",
+  "View Sensitive Submission",
+]);
+/** چرخش پرونده: چه کسی، چه زمانی، چه کاری روی این پرونده انجام داده است. */
+async function caseTimeline(
+  requestId: string,
+  memberId: string | null,
+  user: Actor,
+): Promise<{ events: TimelineEvent[]; registrarName: string }> {
+  const [links, history] = await Promise.all([
+    db.membershipRequestSubmission.findMany({
+      where: { requestId },
+      select: {
+        submission: {
+          select: {
+            id: true,
+            data: true,
+            createdBy: true,
+            createdAt: true,
+            supersedesId: true,
+            version: {
+              select: {
+                schema: true,
+                sensitive: true,
+                purpose: true,
+                form: { select: { title: true } },
+              },
+            },
+          },
+        },
+      },
+    }),
+    db.membershipRequestHistory.findMany({
+      where: { requestId },
+      orderBy: { createdAt: "asc" },
+    }),
+  ]);
+  const subs = links
+    .map((l) => l.submission)
+    .sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+  const subIds = subs.map((s) => s.id);
+  const audits = await db.auditLog.findMany({
+    where: {
+      OR: [
+        { entity: "MembershipRequest", entityId: requestId },
+        ...(memberId ? [{ entity: "Member", entityId: memberId }] : []),
+        ...(subIds.length
+          ? [{ entity: "FormSubmission", entityId: { in: subIds } }]
+          : []),
+      ],
+    },
+    orderBy: { createdAt: "desc" },
+    take: 500,
+  });
+  const actorIds = new Set<string>();
+  for (const s of subs) if (s.createdBy) actorIds.add(s.createdBy);
+  for (const h of history) if (h.actorId) actorIds.add(h.actorId);
+  for (const a of audits) if (a.actorId) actorIds.add(a.actorId);
+  const users = actorIds.size
+    ? await db.user.findMany({
+        where: { id: { in: [...actorIds] } },
+        select: { id: true, displayName: true, username: true },
+      })
+    : [];
+  const nameOf = (uid: string | null | undefined) => {
+    if (!uid) return null;
+    const u = users.find((x) => x.id === uid);
+    return u?.displayName || u?.username || "کاربر حذف‌شده";
+  };
+  const canSensitive = user.permissions.includes("submissions.sensitive");
+  const byId = new Map(subs.map((s) => [s.id, s]));
+  const events: TimelineEvent[] = [];
+  const first = subs[0];
+  for (const s of subs) {
+    const title = s.version.form.title;
+    const hidden = s.version.sensitive && !canSensitive;
+    const prev = s.supersedesId ? byId.get(s.supersedesId) : undefined;
+    let changes: string[] | undefined;
+    const schema = s.version.schema as unknown as FormSchema | null;
+    if (prev && !hidden && Array.isArray(schema?.fields))
+      changes = changedFieldLabels(
+        schema,
+        (prev.data as Record<string, unknown>) ?? {},
+        (s.data as Record<string, unknown>) ?? {},
+      );
+    events.push({
+      id: "s-" + s.id,
+      at: s.createdAt,
+      actorName: s.createdBy
+        ? nameOf(s.createdBy)
+        : "متقاضی (فرم عمومی)",
+      kind: s === first ? "create" : s.supersedesId ? "edit" : "form",
+      title:
+        s === first
+          ? "ثبت اولیه پرونده"
+          : s.supersedesId
+            ? s.version.purpose === "APPLICATION"
+              ? "ویرایش اطلاعات پرونده"
+              : `اصلاح فرم «${title}»`
+            : `تکمیل فرم «${title}»`,
+      changes,
+    });
+  }
+  for (const h of history) {
+    // ورود اولیه به وضعیت «جدید» همان ثبت اولیه پرونده است.
+    if (!h.fromStatus && h.toStatus === "NEW") continue;
+    events.push({
+      id: "h-" + h.id,
+      at: h.createdAt,
+      actorName: nameOf(h.actorId),
+      kind: "status",
+      title: "تغییر وضعیت",
+      fromStatus: h.fromStatus,
+      toStatus: h.toStatus,
+      note: h.note,
+    });
+  }
+  for (const a of audits) {
+    const meta = (a.metadata ?? {}) as Record<string, unknown>;
+    let kind: TimelineEvent["kind"] | null = null;
+    let title = a.action;
+    const details: string[] = [];
+    if (VIEW_ACTIONS.has(a.action)) {
+      kind = "view";
+      title = "مشاهده پرونده";
+    } else if (a.entity === "Member" && a.action === "به‌روزرسانی عضو") {
+      // تغییر وضعیت در تاریخچه وضعیت ثبت می‌شود؛ این‌جا فقط سایر تغییرات.
+      if (meta.photo) details.push("عکس عضو");
+      if (meta.expirationDate) details.push("تاریخ انقضا");
+      if (meta.membershipType) details.push("نوع عضویت");
+      if (details.length) {
+        kind = "member";
+        title = "به‌روزرسانی مشخصات عضو";
+      }
+    } else if (a.action === "ثبت یادداشت / مسئول درخواست") {
+      kind = "note";
+      title = "ثبت یادداشت / تعیین مسئول بررسی";
+    }
+    if (!kind) continue;
+    events.push({
+      id: "a-" + a.id,
+      at: a.createdAt,
+      actorName: nameOf(a.actorId),
+      kind,
+      title,
+      ...(details.length ? { changes: details } : {}),
+    });
+  }
+  events.sort((a, b) => b.at.getTime() - a.at.getTime());
+  return {
+    events,
+    registrarName: first
+      ? first.createdBy
+        ? (nameOf(first.createdBy) ?? "—")
+        : "متقاضی (فرم عمومی)"
+      : "—",
+  };
+}
 export async function requestDetail(id: string, user: Actor, ip: string) {
   requirePermission(user, "requests.read");
   requirePermission(user, "submissions.read");
@@ -547,10 +728,13 @@ export async function requestDetail(id: string, user: Actor, ip: string) {
     id,
     ip,
   );
+  const timeline = await caseTimeline(r.id, null, user);
   return {
     ...r,
     submissions: allowed,
     hiddenSubmissions: r.submissions.length - allowed.length,
+    registrarName: timeline.registrarName,
+    timeline: timeline.events,
   };
 }
 export async function memberDetail(id: string, user: Actor, ip: string) {
@@ -585,13 +769,6 @@ export async function memberDetail(id: string, user: Actor, ip: string) {
       !s.submission.version.sensitive ||
       user.permissions.includes("submissions.sensitive"),
   );
-  const createdBy = m.request.primarySubmission.createdBy;
-  const registrar = createdBy
-    ? await db.user.findUnique({
-        where: { id: createdBy },
-        select: { id: true, displayName: true, username: true },
-      })
-    : null;
   await audit(
     db,
     user.id,
@@ -602,6 +779,7 @@ export async function memberDetail(id: string, user: Actor, ip: string) {
     id,
     ip,
   );
+  const timeline = await caseTimeline(m.requestId, m.id, user);
   return {
     id: m.id,
     membershipNumber: m.membershipNumber,
@@ -610,12 +788,13 @@ export async function memberDetail(id: string, user: Actor, ip: string) {
     startDate: m.startDate,
     expirationDate: m.expirationDate,
     person: m.person,
-    registrarName: registrar?.displayName ?? registrar?.username ?? "—",
+    registrarName: timeline.registrarName,
     registrarNotes: m.request.internalNote ?? "",
     primarySubmission: m.request.primarySubmission,
     submissions: allowed,
     hiddenSubmissions: m.request.submissions.length - allowed.length,
     history: m.request.history,
+    timeline: timeline.events,
   };
 }
 export function csv(rows: unknown[][]) {

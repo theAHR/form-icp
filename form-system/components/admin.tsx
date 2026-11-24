@@ -12,7 +12,7 @@ import {
   MoreHorizontal,
 } from "lucide-react";
 import { api, errorMessage, statuses } from "@/lib/client";
-import { date, toPersianDigits } from "@/lib/utils";
+import { date, dateTime, toPersianDigits } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { useUser, PasswordForm } from "./shell";
 import { FormBuilder, type EditableForm } from "./form-builder";
@@ -501,6 +501,8 @@ interface SubmissionRow {
 interface RequestDetail extends RequestRow {
   submissions: SubmissionRow[];
   hiddenSubmissions: number;
+  registrarName?: string;
+  timeline?: TimelineEvent[];
   history: {
     id: string;
     fromStatus: string;
@@ -696,6 +698,76 @@ function OpsMenu({
     </div>
   );
 }
+interface TimelineEvent {
+  id: string;
+  at: string;
+  actorName: string | null;
+  kind: "create" | "edit" | "form" | "status" | "member" | "note" | "view";
+  title: string;
+  fromStatus?: string | null;
+  toStatus?: string;
+  note?: string | null;
+  changes?: string[];
+}
+/** چرخش پرونده: چه کسی، چه زمانی، چه کاری انجام داده است. */
+function CaseTimeline({ events }: { events: TimelineEvent[] }) {
+  const [showViews, setShowViews] = useState(false);
+  const views = events.filter((e) => e.kind === "view").length;
+  const shown = showViews ? events : events.filter((e) => e.kind !== "view");
+  return (
+    <section className="panel">
+      <div className="row between">
+        <h2>چرخش پرونده (تاریخچه اقدامات)</h2>
+        {views > 0 && (
+          <label className="row" style={{ gap: 6, fontSize: 14 }}>
+            <input
+              type="checkbox"
+              checked={showViews}
+              onChange={(e) => setShowViews(e.target.checked)}
+            />
+            نمایش مشاهده‌ها ({toPersianDigits(views)})
+          </label>
+        )}
+      </div>
+      {!shown.length ? (
+        <p className="muted">رویدادی ثبت نشده است.</p>
+      ) : (
+        <ol className="case-timeline">
+          {shown.map((e) => (
+            <li key={e.id} data-kind={e.kind}>
+              <div className="tl-head">
+                <span className="tl-title">
+                  {e.kind === "status" && e.toStatus
+                    ? (e.fromStatus
+                        ? `تغییر وضعیت از «${statuses[e.fromStatus] ?? e.fromStatus}» به `
+                        : "تغییر وضعیت به ") +
+                      `«${statuses[e.toStatus] ?? e.toStatus}»`
+                    : e.title}
+                </span>
+                <span className="tl-meta">
+                  {e.actorName ?? "سیستم"} · {dateTime(e.at)}
+                </span>
+              </div>
+              {e.note && <div className="tl-body">{e.note}</div>}
+              {e.changes &&
+                (e.changes.length ? (
+                  <div className="tl-changes">
+                    {e.changes.map((c) => (
+                      <span key={c}>{c}</span>
+                    ))}
+                  </div>
+                ) : (
+                  e.kind === "edit" && (
+                    <div className="tl-body muted">بدون تغییر در مقادیر</div>
+                  )
+                ))}
+            </li>
+          ))}
+        </ol>
+      )}
+    </section>
+  );
+}
 function RequestView({ id, onClose }: { id: string; onClose: () => void }) {
   const { data, error, reload } = useLoad<RequestDetail>("request/" + id);
   const forms = useLoad<PageData<EditableForm>>("forms");
@@ -737,6 +809,7 @@ function RequestView({ id, onClose }: { id: string; onClose: () => void }) {
           <span dir="ltr">{data.person.mobile ?? "—"}</span>
         </p>
         <p>مصاحبه: {data.interviewCompleted ? "تکمیل شده" : "تکمیل نشده"}</p>
+        <p>ثبت‌کننده: {data.registrarName ?? "—"}</p>
         {user.permissions.includes("requests.write") && (
           <>
             <label>دلیل تغییر وضعیت (برای رد یا اصلاح الزامی)</label>
@@ -876,17 +949,7 @@ function RequestView({ id, onClose }: { id: string; onClose: () => void }) {
           </details>
         ))}
       </section>
-      <section className="panel">
-        <h2>تاریخچه بررسی</h2>
-        <div className="timeline">
-          {data.history.map((h) => (
-            <p key={h.id}>
-              <Badge status={h.toStatus} /> <small>{date(h.createdAt)}</small>
-              {h.note && <span> · {h.note}</span>}
-            </p>
-          ))}
-        </div>
-      </section>
+      <CaseTimeline events={data.timeline ?? []} />
       {fill && (
         <Modal title="ثبت فرم تکمیلی" onClose={() => setFill(undefined)}>
           <FillForm
@@ -932,6 +995,7 @@ interface MemberDetail {
     createdAt: string;
     note: string;
   }[];
+  timeline?: TimelineEvent[];
 }
 function MemberView({ id, onClose }: { id: string; onClose: () => void }) {
   const { data, error } = useLoad<MemberDetail>("member/" + id);
@@ -1018,24 +1082,7 @@ function MemberView({ id, onClose }: { id: string; onClose: () => void }) {
         <h2>{submission.version.form.title}</h2>
         <Answers fields={submission.version.schema.fields} data={submission.data} />
       </section>
-      {!!data.history.length && (
-        <section className="panel">
-          <h2>تاریخچه وضعیت</h2>
-          {data.history.map((h) => (
-            <div
-              className="row between"
-              key={h.id}
-              style={{ padding: "8px 0", borderBottom: "1px solid #edf0f3" }}
-            >
-              <span>
-                {statuses[h.toStatus] ?? h.toStatus}
-                {h.note ? " — " + h.note : ""}
-              </span>
-              <small>{date(h.createdAt)}</small>
-            </div>
-          ))}
-        </section>
-      )}
+      <CaseTimeline events={data.timeline ?? []} />
     </>
   );
 }

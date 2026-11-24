@@ -377,6 +377,31 @@ export function answerSchema(schema: FormSchema) {
     }
   });
 }
+function emptyAnswer(v: unknown) {
+  return (
+    v === undefined ||
+    v === null ||
+    v === "" ||
+    (Array.isArray(v) && !v.length)
+  );
+}
+/** برچسب فیلدهایی که بین دو پاسخ یک فرم تغییر کرده‌اند (برای تاریخچه پرونده). */
+export function changedFieldLabels(
+  schema: FormSchema,
+  before: Record<string, unknown>,
+  after: Record<string, unknown>,
+): string[] {
+  const out: string[] = [];
+  for (const f of schema.fields) {
+    if (decorative(f)) continue;
+    const a = before[f.key];
+    const b = after[f.key];
+    if (emptyAnswer(a) && emptyAnswer(b)) continue;
+    if (JSON.stringify(a ?? null) !== JSON.stringify(b ?? null))
+      out.push(f.label);
+  }
+  return out;
+}
 export function fileIds(schema: FormSchema, data: Record<string, unknown>) {
   const ids: string[] = [];
   const walk = (fields: Field[], d: Record<string, unknown>) => {

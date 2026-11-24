@@ -14,6 +14,7 @@
     "db:seed": "node --env-file-if-exists=.env --import tsx prisma/seed.ts",
     "forms:export": "node --env-file-if-exists=.env --import tsx scripts/forms-transfer.ts export",
     "forms:import": "node --env-file-if-exists=.env --import tsx scripts/forms-transfer.ts import",
+    "forms:patch-member": "node --env-file-if-exists=.env --import tsx scripts/patch-member-form.ts",
     "backup:members": "node --env-file-if-exists=.env scripts/backup-members.mjs",
     "test:e2e": "playwright test"
   },
